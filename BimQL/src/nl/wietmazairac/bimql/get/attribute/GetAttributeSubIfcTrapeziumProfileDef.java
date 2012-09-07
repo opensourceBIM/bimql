@@ -1,0 +1,88 @@
+package nl.wietmazairac.bimql.get.attribute;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.bimserver.ifc.*;
+import org.bimserver.emf.*;
+import org.bimserver.models.ifc2x3.*;
+
+public class GetAttributeSubIfcTrapeziumProfileDef {
+	// fields
+	private Object object;
+	private String string;
+
+	// constructors
+	public GetAttributeSubIfcTrapeziumProfileDef(Object object, String string) {
+		this.object = object;
+		this.string = string;
+	}
+
+	// methods
+	public Object getObject() {
+		return object;
+	}
+
+	public void setObject(Object object) {
+		this.object = object;
+	}
+
+	public String getString() {
+		return string;
+	}
+
+	public void setString(String string) {
+		this.string = string;
+	}
+
+	public ArrayList<Object> getResult() {
+	ArrayList<Object> resultList = new ArrayList<Object>();
+		if (string.equals("YDimAsString")) {
+			resultList.add(((IfcTrapeziumProfileDef) object).getYDimAsString());
+			 //1String
+		}
+		else if (string.equals("YDim")) {
+			resultList.add(((IfcTrapeziumProfileDef) object).getYDim());
+			 //1double
+		}
+		else if (string.equals("TopXDim")) {
+			resultList.add(((IfcTrapeziumProfileDef) object).getTopXDim());
+			 //1double
+		}
+		else if (string.equals("BottomXDim")) {
+			resultList.add(((IfcTrapeziumProfileDef) object).getBottomXDim());
+			 //1double
+		}
+		else if (string.equals("TopXDimAsString")) {
+			resultList.add(((IfcTrapeziumProfileDef) object).getTopXDimAsString());
+			 //1String
+		}
+		else if (string.equals("TopXOffset")) {
+			resultList.add(((IfcTrapeziumProfileDef) object).getTopXOffset());
+			 //1double
+		}
+		else if (string.equals("BottomXDimAsString")) {
+			resultList.add(((IfcTrapeziumProfileDef) object).getBottomXDimAsString());
+			 //1String
+		}
+		else if (string.equals("TopXOffsetAsString")) {
+			resultList.add(((IfcTrapeziumProfileDef) object).getTopXOffsetAsString());
+			 //1String
+		}
+		else if (string.equals("Position")) {
+			resultList.add(((IfcTrapeziumProfileDef) object).getPosition());
+			 //2IfcAxis2Placement2D
+		}
+		else if (string.equals("ProfileType")) {
+			resultList.add(((IfcTrapeziumProfileDef) object).getProfileType());
+			 //3IfcProfileTypeEnum
+		}
+		else if (string.equals("ProfileName")) {
+			resultList.add(((IfcTrapeziumProfileDef) object).getProfileName());
+			 //3String
+		}
+		else {
+		}
+		return resultList;
+	}
+}
