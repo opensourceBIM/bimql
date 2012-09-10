@@ -3,15 +3,15 @@ package nl.wietmazairac.bimql.get.attribute;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.bimserver.ifc.*;
-import org.bimserver.emf.*;
-import org.bimserver.models.ifc2x3.*;
+import org.bimserver.ifc.IfcModel;
+import org.bimserver.models.ifc2x3tc1.IfcRoot;
+import org.eclipse.emf.ecore.EObject;
 
 public class GetAttributeMain {
 	// fields
 	private IfcModel ifcModel;
 	private List<IfcRoot> ifcRootList;
-	private List<Object> ObjectList;
+	private List<Object> objectList;
 	private String string;
 
 	// constructors
@@ -19,7 +19,7 @@ public class GetAttributeMain {
 		this.ifcModel = ifcModel;
 		this.ifcRootList = ifcModel.getAllWithSubTypes(IfcRoot.class);
 		for (IfcRoot ifcRoot : ifcRootList) {
-			ObjectList.add(ifcRoot);
+			objectList.add(ifcRoot);
 		}
 		this.string = string;
 	}
@@ -29,8 +29,8 @@ public class GetAttributeMain {
 	//	this.string = string;
 	//}
 
-	public GetAttributeMain(List<Object> ObjectList, String string) {
-		this.ObjectList = ObjectList;
+	public GetAttributeMain(List<Object> objectList, String string) {
+		this.objectList = objectList;
 		this.string = string;
 	}
 
@@ -59,11 +59,11 @@ public class GetAttributeMain {
 		this.string = string;
 	}
 
-	public ArrayList<ArrayList> getResult() {
-		ArrayList<Object> objectArrayList = new ArrayList<Object>();
-		ArrayList<ArrayList> arrayListArrayList = new ArrayList<ArrayList>();
+	public List<List<Object>> getResult() {
+		List<Object> objectArrayList = new ArrayList<Object>();
+		List<List<Object>> arrayListArrayList = new ArrayList<List<Object>>();
 
-		for (Object object : ObjectList) {
+		for (Object object : objectList) {
 			if (((IfcRoot) object).eClass().getName().equals("Ifc2DCompositeCurve")) {
 				GetAttributeSubIfc2DCompositeCurve GetAttributeSubIfc2DCompositeCurve = new GetAttributeSubIfc2DCompositeCurve(object, string);
 				objectArrayList = GetAttributeSubIfc2DCompositeCurve.getResult();
@@ -74,9 +74,9 @@ public class GetAttributeMain {
 				objectArrayList = GetAttributeSubIfc2x3Factory.getResult();
 				arrayListArrayList.add(objectArrayList);
 			}
-			else if (((IfcRoot) object).eClass().getName().equals("Ifc2x3Package")) {
-				GetAttributeSubIfc2x3Package GetAttributeSubIfc2x3Package = new GetAttributeSubIfc2x3Package(object, string);
-				objectArrayList = GetAttributeSubIfc2x3Package.getResult();
+			else if (((IfcRoot) object).eClass().getName().equals("Ifc2x3tc1Package")) {
+				GetAttributeSubIfc2x3Package GetAttributeSubIfc2x3tc1Package = new GetAttributeSubIfc2x3Package(object, string);
+				objectArrayList = GetAttributeSubIfc2x3tc1Package.getResult();
 				arrayListArrayList.add(objectArrayList);
 			}
 			else if (((IfcRoot) object).eClass().getName().equals("IfcAbsorbedDoseMeasure")) {

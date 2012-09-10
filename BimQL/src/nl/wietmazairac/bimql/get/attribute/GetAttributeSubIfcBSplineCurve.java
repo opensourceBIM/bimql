@@ -3,9 +3,8 @@ package nl.wietmazairac.bimql.get.attribute;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.bimserver.ifc.*;
-import org.bimserver.emf.*;
-import org.bimserver.models.ifc2x3.*;
+import org.bimserver.models.ifc2x3tc1.IfcBSplineCurve;
+import org.eclipse.emf.ecore.EObject;
 
 public class GetAttributeSubIfcBSplineCurve {
 	// fields
@@ -35,8 +34,8 @@ public class GetAttributeSubIfcBSplineCurve {
 		this.string = string;
 	}
 
-	public ArrayList<Object> getResult() {
-	ArrayList<Object> resultList = new ArrayList<Object>();
+	public List<Object> getResult() {
+	List<Object> resultList = new ArrayList<Object>();
 		if (string.equals("Degree")) {
 			resultList.add(((IfcBSplineCurve) object).getDegree());
 			 //1int

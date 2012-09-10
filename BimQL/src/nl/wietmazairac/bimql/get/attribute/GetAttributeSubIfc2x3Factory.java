@@ -1,11 +1,8 @@
 package nl.wietmazairac.bimql.get.attribute;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import org.bimserver.ifc.*;
-import org.bimserver.emf.*;
-import org.bimserver.models.ifc2x3.*;
+import org.bimserver.models.ifc2x3tc1.Ifc2x3tc1Factory;
 
 public class GetAttributeSubIfc2x3Factory {
 	// fields
@@ -37,13 +34,13 @@ public class GetAttributeSubIfc2x3Factory {
 
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
-		if (string.equals("Ifc2x3Package")) {
-			resultList.add(((Ifc2x3Factory) object).getIfc2x3Package());
-			 //1Ifc2x3Package
+		if (string.equals("Ifc2x3tc1Package")) {
+			resultList.add(((Ifc2x3tc1Factory) object).getIfc2x3tc1Package());
+			 //1Ifc2x3tc1Package
 		}
 		else if (string.equals("Package")) {
-			resultList.add(((Ifc2x3Factory) object).getPackage());
-			 //1Ifc2x3Package
+			resultList.add(((Ifc2x3tc1Factory) object).getEPackage());
+			 //1Ifc2x3tc1Package
 		}
 		return resultList;
 	}

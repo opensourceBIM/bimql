@@ -3,7 +3,7 @@ package nl.wietmazairac.bimql;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.bimserver.models.ifc2x3.IfcRoot;
+import org.eclipse.emf.ecore.EObject;
 
 public class CullList {
 	// fields

@@ -1,11 +1,6 @@
 package nl.wietmazairac.bimql.get.attribute;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import org.bimserver.ifc.*;
-import org.bimserver.emf.*;
-import org.bimserver.models.ifc2x3.*;
 
 public class GetAttributeSubIfcPreDefinedColour {
 	// fields

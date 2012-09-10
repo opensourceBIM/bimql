@@ -1,11 +1,8 @@
 package nl.wietmazairac.bimql.get.attribute;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import org.bimserver.ifc.*;
-import org.bimserver.emf.*;
-import org.bimserver.models.ifc2x3.*;
+import org.bimserver.models.ifc2x3tc1.IfcCartesianTransformationOperator3DnonUniform;
 
 public class GetAttributeSubIfcCartesianTransformationOperator3DnonUniform {
 	// fields

@@ -1,21 +1,27 @@
 // $ANTLR 3.4 C:\\Users\\Wiet\\Dropbox\\workspace\\BimQL\\src\\nl\\wietmazairac\\bimql\\BimQL.g 2012-09-05 21:38:01
 
 	package nl.wietmazairac.bimql;
-	import java.util.HashMap;
-	import java.util.Map;
-	import nl.wietmazairac.bimql.get.attribute.GetAttributeMain;
-	import nl.wietmazairac.bimql.get.entitytype.GetEntityTypeMain;
-	import nl.wietmazairac.bimql.get.property.GetPropertyMain;
-	import nl.wietmazairac.bimql.set.attribute.SetAttributeMain;
-	import org.bimserver.ifc.IfcModel;
-	import org.bimserver.models.ifc2x3.IfcObject;
-	import org.bimserver.models.ifc2x3.IfcRoot;
-	
-
-import org.antlr.runtime.*;
-import java.util.Stack;
+	import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-import java.util.ArrayList;
+import java.util.Map;
+
+import nl.wietmazairac.bimql.get.attribute.GetAttributeMain;
+import nl.wietmazairac.bimql.get.entitytype.GetEntityTypeMain;
+import nl.wietmazairac.bimql.get.property.GetPropertyMain;
+import nl.wietmazairac.bimql.set.attribute.SetAttributeMain;
+
+import org.antlr.runtime.BitSet;
+import org.antlr.runtime.NoViableAltException;
+import org.antlr.runtime.Parser;
+import org.antlr.runtime.RecognitionException;
+import org.antlr.runtime.RecognizerSharedState;
+import org.antlr.runtime.Token;
+import org.antlr.runtime.TokenStream;
+import org.bimserver.ifc.IfcModel;
+import org.bimserver.models.ifc2x3tc1.IfcRoot;
+import org.bimserver.plugins.serializers.IfcModelInterface;
+import org.eclipse.emf.ecore.EObject;
 
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class BimQLParser extends Parser {
@@ -71,7 +77,7 @@ public class BimQLParser extends Parser {
 
     // $ANTLR start "bimql"
     // C:\\Users\\Wiet\\Dropbox\\workspace\\BimQL\\src\\nl\\wietmazairac\\bimql\\BimQL.g:29:1: bimql[IfcModel ifcModel] returns [List<Object> bimqlReturns] : select[objectList] ;
-    public final List<Object> bimql(IfcModel ifcModel) throws RecognitionException {
+    public final List<Object> bimql(IfcModelInterface ifcModel) throws RecognitionException {
         List<Object> bimqlReturns = null;
 
 
@@ -292,7 +298,7 @@ public class BimQLParser extends Parser {
 
                     				List<Object> objectList = new ArrayList<Object>(hashMapObjectList.get((VARIABLE2!=null?VARIABLE2.getText():null)));
                     				GetAttributeMain getAttributeMain = new GetAttributeMain(objectList, (string1!=null?string1.getText():null));
-                    				List<ArrayList> arrayListList = new ArrayList<ArrayList>(getAttributeMain.getResult());
+                    				List<List<Object>> arrayListList = new ArrayList<List<Object>>(getAttributeMain.getResult());
                     				objectList.clear();
                     				
                     				FlattenList flattenList = new FlattenList(arrayListList);				
@@ -314,7 +320,7 @@ public class BimQLParser extends Parser {
 
                     				List<Object> objectList = new ArrayList<Object>(hashMapObjectList.get((VARIABLE2!=null?VARIABLE2.getText():null)));
                     				GetPropertyMain getPropertyMain = new GetPropertyMain(objectList, (string2!=null?string2.getText():null));
-                    				List<ArrayList> arrayListList = new ArrayList<ArrayList>(getPropertyMain.getResult());
+                    				List<List<Object>> arrayListList = new ArrayList<List<Object>>(getPropertyMain.getResult());
                     				objectList.clear();
                     				FlattenList flattenList = new FlattenList(arrayListList);				
                     				objectList = flattenList.getResult();
@@ -629,7 +635,7 @@ public class BimQLParser extends Parser {
 
         String relationright6 =null;
 
-        List<ArrayList> relationleft5 =null;
+        List<List<Object>> relationleft5 =null;
 
 
         try {
@@ -821,8 +827,8 @@ public class BimQLParser extends Parser {
 
     // $ANTLR start "relationleft"
     // C:\\Users\\Wiet\\Dropbox\\workspace\\BimQL\\src\\nl\\wietmazairac\\bimql\\BimQL.g:162:1: relationleft returns [List<ArrayList> relationleftReturns] : ( VARIABLE '.EntityType' | VARIABLE '.Attribute.' STRING | VARIABLE '.Property.' STRING );
-    public final List<ArrayList> relationleft() throws RecognitionException {
-        List<ArrayList> relationleftReturns = null;
+    public final List<List<Object>> relationleft() throws RecognitionException {
+        List<List<Object>> relationleftReturns = null;
 
 
         Token VARIABLE6=null;
@@ -878,9 +884,9 @@ public class BimQLParser extends Parser {
                     match(input,10,FOLLOW_10_in_relationleft475); 
 
 
-                    	    List<Object> objectList = new ArrayList<Object>(hashMapObjectList.get((VARIABLE6!=null?VARIABLE6.getText():null)));
+                    	  List<Object> objectList = new ArrayList<Object>(hashMapObjectList.get((VARIABLE6!=null?VARIABLE6.getText():null)));
                           GetEntityTypeMain getEntityTypeMain = new GetEntityTypeMain(objectList);
-                          List<ArrayList> arrayListList = new ArrayList<ArrayList>(getEntityTypeMain.getResult());
+                          List<List<Object>> arrayListList = new ArrayList<List<Object>>(getEntityTypeMain.getResult());
                           relationleftReturns = arrayListList;
                     	
 
@@ -898,7 +904,7 @@ public class BimQLParser extends Parser {
 
                     			List<Object> objectList = new ArrayList<Object>(hashMapObjectList.get((VARIABLE7!=null?VARIABLE7.getText():null)));
                     			GetAttributeMain getAttributeMain = new GetAttributeMain(objectList, (STRING8!=null?STRING8.getText():null));
-                    			List<ArrayList> arrayListList = new ArrayList<ArrayList>(getAttributeMain.getResult());
+                    			List<List<Object>> arrayListList = new ArrayList<List<Object>>(getAttributeMain.getResult());
                     			relationleftReturns = arrayListList;
                     			
 
@@ -916,7 +922,7 @@ public class BimQLParser extends Parser {
 
                           List<Object> objectList = new ArrayList<Object>(hashMapObjectList.get((VARIABLE9!=null?VARIABLE9.getText():null)));
                           GetPropertyMain getPropertyMain = new GetPropertyMain(objectList, (STRING10!=null?STRING10.getText():null));
-                          List<ArrayList> arrayListList = new ArrayList<ArrayList>(getPropertyMain.getResult());
+                          List<List<Object>> arrayListList = new ArrayList<List<Object>>(getPropertyMain.getResult());
                           relationleftReturns = arrayListList;
                           
 

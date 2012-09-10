@@ -3,7 +3,9 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="antlr-generated"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-	<classpathentry kind="lib" path="antlr-3.4-complete.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/MinimalIFCEMF"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/buildingSMARTLibrary"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Ifc"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/IfcPlugins"/>
+	<classpathentry kind="lib" path="lib/antlr-3.4-complete.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

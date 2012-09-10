@@ -3,10 +3,104 @@ package nl.wietmazairac.bimql.get.property;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.bimserver.ifc.*;
-import org.bimserver.emf.*;
-import org.bimserver.models.ifc2x3.*;
-import org.bimserver.models.ifc2x3.impl.*;
+import org.bimserver.ifc.IfcModel;
+import org.bimserver.models.ifc2x3tc1.*;
+import org.bimserver.models.ifc2x3tc1.impl.Ifc2x3tc1PackageImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcAbsorbedDoseMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcAccelerationMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcAmountOfSubstanceMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcAngularVelocityMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcAreaMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcBooleanImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcContextDependentMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcCountMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcCurvatureMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcDescriptiveMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcDoseEquivalentMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcDynamicViscosityMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcElectricCapacitanceMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcElectricChargeMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcElectricConductanceMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcElectricCurrentMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcElectricResistanceMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcElectricVoltageMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcEnergyMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcForceMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcFrequencyMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcGloballyUniqueIdImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcHeatFluxDensityMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcHeatingValueMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcIdentifierImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcIlluminanceMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcInductanceMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcIntegerCountRateMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcIntegerImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcIonConcentrationMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcIsothermalMoistureCapacityMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcKinematicViscosityMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcLabelImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcLengthMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcLinearForceMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcLinearMomentMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcLinearStiffnessMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcLinearVelocityMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcLogicalImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcLuminousFluxMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcLuminousIntensityDistributionMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcLuminousIntensityMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcMagneticFluxDensityMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcMagneticFluxMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcMassDensityMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcMassFlowRateMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcMassMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcMassPerLengthMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcModulusOfElasticityMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcModulusOfLinearSubgradeReactionMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcModulusOfRotationalSubgradeReactionMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcModulusOfSubgradeReactionMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcMoistureDiffusivityMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcMolecularWeightMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcMomentOfInertiaMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcMonetaryMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcNumericMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcPHMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcParameterValueImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcPlanarForceMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcPlaneAngleMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcPowerMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcPressureMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcRadioActivityMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcRatioMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcRealImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcRotationalFrequencyMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcRotationalMassMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcRotationalStiffnessMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcSectionModulusMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcSectionalAreaIntegralMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcShearModulusMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcSolidAngleMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcSoundPowerMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcSoundPressureMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcSpecificHeatCapacityMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcSpecularExponentImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcSpecularRoughnessImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcTemperatureGradientMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcTextImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcThermalAdmittanceMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcThermalConductivityMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcThermalExpansionCoefficientMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcThermalResistanceMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcThermalTransmittanceMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcThermodynamicTemperatureMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcTimeMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcTimeStampImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcTorqueMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcVaporPermeabilityMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcVolumeMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcVolumetricFlowRateMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcWarpingConstantMeasureImpl;
+import org.bimserver.models.ifc2x3tc1.impl.IfcWarpingMomentMeasureImpl;
+import org.eclipse.emf.ecore.EObject;
 
 public class GetPropertyMain {
 	// fields
@@ -47,8 +141,8 @@ public class GetPropertyMain {
 		this.string = string;
 	}
 
-	public ArrayList<ArrayList> getResult() {
-		ArrayList<ArrayList> arrayListArrayList = new ArrayList<ArrayList>();
+	public List<List<Object>> getResult() {
+		List<List<Object>> arrayListArrayList = new ArrayList<List<Object>>();
 		for (Object object : objectList) {
 			ArrayList<Object> objectArrayList = new ArrayList<Object>();
 			if (object instanceof IfcObject) {
@@ -61,8 +155,8 @@ public class GetPropertyMain {
 							for (IfcProperty ifcProperty : ifcPropertyList) {
 								if (ifcProperty.getName().equals(string)) {
 									if (ifcProperty.getClass().getSimpleName().equals("IfcPropertySingleValueImpl")) {
-										if (((IfcPropertySingleValue) ifcProperty).getNominalValue().getClass().getSimpleName().equals("Ifc2x3Package")) {
-											objectArrayList.add(((Ifc2x3Package) ((IfcPropertySingleValue) ifcProperty).getNominalValue()).getWrappedValue());
+										if (((IfcPropertySingleValue) ifcProperty).getNominalValue().getClass().getSimpleName().equals("Ifc2x3tc1Package")) {
+											objectArrayList.add(((Ifc2x3tc1Package) ((IfcPropertySingleValue) ifcProperty).getNominalValue()).getWrappedValue());
 										}
 										else if (((IfcPropertySingleValue) ifcProperty).getNominalValue().getClass().getSimpleName().equals("IfcAbsorbedDoseMeasure")) {
 											objectArrayList.add(((IfcAbsorbedDoseMeasure) ((IfcPropertySingleValue) ifcProperty).getNominalValue()).getWrappedValue());
@@ -346,8 +440,8 @@ public class GetPropertyMain {
 										else if (((IfcPropertySingleValue) ifcProperty).getNominalValue().getClass().getSimpleName().equals("IfcWarpingMomentMeasure")) {
 											objectArrayList.add(((IfcWarpingMomentMeasure) ((IfcPropertySingleValue) ifcProperty).getNominalValue()).getWrappedValue());
 										}
-										else if (((IfcPropertySingleValue) ifcProperty).getNominalValue().getClass().getSimpleName().equals("Ifc2x3PackageImpl")) {
-											objectArrayList.add(((Ifc2x3PackageImpl) ((IfcPropertySingleValue) ifcProperty).getNominalValue()).getWrappedValue());
+										else if (((IfcPropertySingleValue) ifcProperty).getNominalValue().getClass().getSimpleName().equals("Ifc2x3tc1PackageImpl")) {
+											objectArrayList.add(((Ifc2x3tc1PackageImpl) ((IfcPropertySingleValue) ifcProperty).getNominalValue()).getWrappedValue());
 										}
 										else if (((IfcPropertySingleValue) ifcProperty).getNominalValue().getClass().getSimpleName().equals("IfcAbsorbedDoseMeasureImpl")) {
 											objectArrayList.add(((IfcAbsorbedDoseMeasureImpl) ((IfcPropertySingleValue) ifcProperty).getNominalValue()).getWrappedValue());
@@ -638,8 +732,8 @@ public class GetPropertyMain {
 									else if (ifcProperty.getClass().getSimpleName().equals("IfcComplexPropertyImpl")) {
 										List<IfcProperty> ifcComplexPropertyList = new ArrayList<IfcProperty>(((IfcComplexProperty) ifcProperty).getHasProperties());
 										for (IfcProperty ifcComplexProperty : ifcComplexPropertyList) {
-											if (((IfcPropertySingleValue) ifcComplexProperty).getNominalValue().getClass().getSimpleName().equals("Ifc2x3Package")) {
-												objectArrayList.add(((Ifc2x3Package) ((IfcPropertySingleValue) ifcComplexProperty).getNominalValue()).getWrappedValue());
+											if (((IfcPropertySingleValue) ifcComplexProperty).getNominalValue().getClass().getSimpleName().equals("Ifc2x3tc1Package")) {
+												objectArrayList.add(((Ifc2x3tc1Package) ((IfcPropertySingleValue) ifcComplexProperty).getNominalValue()).getWrappedValue());
 											}
 											else if (((IfcPropertySingleValue) ifcComplexProperty).getNominalValue().getClass().getSimpleName().equals("IfcAbsorbedDoseMeasure")) {
 												objectArrayList.add(((IfcAbsorbedDoseMeasure) ((IfcPropertySingleValue) ifcComplexProperty).getNominalValue()).getWrappedValue());
@@ -923,8 +1017,8 @@ public class GetPropertyMain {
 											else if (((IfcPropertySingleValue) ifcComplexProperty).getNominalValue().getClass().getSimpleName().equals("IfcWarpingMomentMeasure")) {
 												objectArrayList.add(((IfcWarpingMomentMeasure) ((IfcPropertySingleValue) ifcComplexProperty).getNominalValue()).getWrappedValue());
 											}
-											else if (((IfcPropertySingleValue) ifcComplexProperty).getNominalValue().getClass().getSimpleName().equals("Ifc2x3PackageImpl")) {
-												objectArrayList.add(((Ifc2x3PackageImpl) ((IfcPropertySingleValue) ifcComplexProperty).getNominalValue()).getWrappedValue());
+											else if (((IfcPropertySingleValue) ifcComplexProperty).getNominalValue().getClass().getSimpleName().equals("Ifc2x3tc1PackageImpl")) {
+												objectArrayList.add(((Ifc2x3tc1PackageImpl) ((IfcPropertySingleValue) ifcComplexProperty).getNominalValue()).getWrappedValue());
 											}
 											else if (((IfcPropertySingleValue) ifcComplexProperty).getNominalValue().getClass().getSimpleName().equals("IfcAbsorbedDoseMeasureImpl")) {
 												objectArrayList.add(((IfcAbsorbedDoseMeasureImpl) ((IfcPropertySingleValue) ifcComplexProperty).getNominalValue()).getWrappedValue());

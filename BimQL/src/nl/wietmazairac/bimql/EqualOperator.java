@@ -5,24 +5,24 @@ import java.util.List;
 
 public class EqualOperator {
 	// fields
-	private List<ArrayList> leftOperand;
+	private List<List<Object>> leftOperand;
 	private String rightOperand;
 
 	// constructors
 	public EqualOperator() {
 	}
 
-	public EqualOperator(List<ArrayList> leftOperand, String rightOperand) {
+	public EqualOperator(List<List<Object>> leftOperand, String rightOperand) {
 		this.leftOperand = leftOperand;
 		this.rightOperand = rightOperand;
 	}
 
 	// methods
-	public List<ArrayList> getLeftOperand() {
+	public List<List<Object>> getLeftOperand() {
 		return leftOperand;
 	}
 
-	public void setLeftOperand(List<ArrayList> leftOperand) {
+	public void setLeftOperand(List<List<Object>> leftOperand) {
 		this.leftOperand = leftOperand;
 	}
 
@@ -36,7 +36,7 @@ public class EqualOperator {
 
 	public List<Boolean> getResult() {
 		List<Boolean> result = new ArrayList<Boolean>();
-		for (ArrayList arrayList : leftOperand) {
+		for (List<Object> arrayList : leftOperand) {
 			if (arrayList.size() > 0) {
 				for (int i = 0; i < arrayList.size(); i++) {
 					if (arrayList.get(i) != null) {

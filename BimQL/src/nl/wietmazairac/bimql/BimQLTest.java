@@ -10,16 +10,15 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 import nl.tue.buildingsmart.express.parser.SchemaLoader;
+
 import org.antlr.runtime.ANTLRStringStream;
 import org.antlr.runtime.CharStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.TokenStream;
-import org.bimserver.emf.IdEObjectImpl;
 import org.bimserver.ifc.IfcModel;
 import org.bimserver.ifc.step.deserializer.IfcStepDeserializer;
 import org.bimserver.ifc.step.serializer.IfcStepSerializer;
-import org.bimserver.models.ifc2x3.IfcDoor;
 import org.bimserver.plugins.PluginException;
 import org.bimserver.plugins.PluginManager;
 import org.bimserver.plugins.deserializers.DeserializeException;
@@ -27,10 +26,7 @@ import org.bimserver.plugins.ifcengine.IfcEngine;
 import org.bimserver.plugins.schema.SchemaPlugin;
 import org.bimserver.plugins.serializers.ProjectInfo;
 import org.bimserver.plugins.serializers.SerializerException;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.bimserver.ifc.*;
-import org.bimserver.emf.*;
-import org.bimserver.models.ifc2x3.*;
+import org.eclipse.emf.ecore.EObject;
 
 public class BimQLTest {
 
@@ -77,7 +73,7 @@ public class BimQLTest {
 		TokenStream tokenStream = new CommonTokenStream(lexer);
 		BimQLParser parser = new BimQLParser(tokenStream);
 
-		List<Object> result = new ArrayList<Object>();
+		List<Object> result;
 		System.out.println("Start searching");
 		result = parser.bimql(ifcModel);
 		System.out.println("Stop searching");
@@ -106,7 +102,7 @@ public class BimQLTest {
 		TokenStream tokenStream2 = new CommonTokenStream(lexer2);
 		BimQLParser parser2 = new BimQLParser(tokenStream2);
 
-		List<Object> result2 = new ArrayList<Object>();
+		List<Object> result2;
 		System.out.println("Start searching");
 		result2 = parser2.bimql(ifcModel);
 		System.out.println("Stop searching");
@@ -128,7 +124,7 @@ public class BimQLTest {
 		TokenStream tokenStream3 = new CommonTokenStream(lexer3);
 		BimQLParser parser3 = new BimQLParser(tokenStream3);
 
-		List<Object> result3 = new ArrayList<Object>();
+		List<Object> result3;
 		System.out.println("Start searching");
 		result3 = parser3.bimql(ifcModel);
 		System.out.println("Stop searching");
@@ -150,7 +146,7 @@ public class BimQLTest {
 		TokenStream tokenStream4 = new CommonTokenStream(lexer4);
 		BimQLParser parser4 = new BimQLParser(tokenStream4);
 
-		List<Object> result4 = new ArrayList<Object>();
+		List<Object> result4;
 		System.out.println("Start searching");
 		result4 = parser4.bimql(ifcModel);
 		System.out.println("Stop searching");

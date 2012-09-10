@@ -3,17 +3,7 @@ package nl.wietmazairac.bimql.get.entitytype;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.bimserver.ifc.IfcModel;
-import org.bimserver.models.ifc2x3.IfcComplexProperty;
-import org.bimserver.models.ifc2x3.IfcObject;
-import org.bimserver.models.ifc2x3.IfcProperty;
-import org.bimserver.models.ifc2x3.IfcPropertySet;
-import org.bimserver.models.ifc2x3.IfcPropertySetDefinition;
-import org.bimserver.models.ifc2x3.IfcPropertySingleValue;
-import org.bimserver.models.ifc2x3.IfcRelDefines;
-import org.bimserver.models.ifc2x3.IfcRelDefinesByProperties;
-import org.bimserver.models.ifc2x3.IfcRoot;
-import org.bimserver.models.ifc2x3.IfcSlab;
+import org.bimserver.models.ifc2x3tc1.IfcRoot;
 
 public class GetEntityTypeMain {
 	// fields
@@ -33,11 +23,11 @@ public class GetEntityTypeMain {
 		this.objectList = objectList;
 	}
 	
-	public ArrayList<ArrayList> getResult() {
+	public List<List<Object>> getResult() {
 		
-		ArrayList<ArrayList> arrayListArrayList = new ArrayList<ArrayList>();
+		List<List<Object>> arrayListArrayList = new ArrayList<List<Object>>();
 		for (int i = 0; i < objectList.size(); i++) {			
-			ArrayList<String> stringArrayList = new ArrayList<String>();			
+			List<Object> stringArrayList = new ArrayList<Object>();			
 			stringArrayList.add(((IfcRoot) objectList.get(i)).eClass().getName());
 			arrayListArrayList.add(stringArrayList);
 		}

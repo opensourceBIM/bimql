@@ -1,11 +1,8 @@
 package nl.wietmazairac.bimql.set.attribute;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import org.bimserver.ifc.*;
-import org.bimserver.emf.*;
-import org.bimserver.models.ifc2x3.*;
+import org.bimserver.models.ifc2x3tc1.IfcRoot;
 
 public class SetAttributeMain {
 	// fields
@@ -24,7 +21,7 @@ public class SetAttributeMain {
 	}
 
 	// methods
-	public List getList() {
+	public List<Object> getList() {
 		return objectList;
 	}
 
@@ -59,9 +56,9 @@ public class SetAttributeMain {
 				SetAttributeSubIfc2x3Factory setAttributeSubIfc2x3Factory = new SetAttributeSubIfc2x3Factory(object, attributeName, attributeNewValue);
 				setAttributeSubIfc2x3Factory.setAttribute();
 			}
-			else if (((IfcRoot) object).eClass().getName().equals("Ifc2x3Package")) {
-				SetAttributeSubIfc2x3Package setAttributeSubIfc2x3Package = new SetAttributeSubIfc2x3Package(object, attributeName, attributeNewValue);
-				setAttributeSubIfc2x3Package.setAttribute();
+			else if (((IfcRoot) object).eClass().getName().equals("Ifc2x3tc1Package")) {
+				SetAttributeSubIfc2x3Package setAttributeSubIfc2x3tc1Package = new SetAttributeSubIfc2x3Package(object, attributeName, attributeNewValue);
+				setAttributeSubIfc2x3tc1Package.setAttribute();
 			}
 			else if (((IfcRoot) object).eClass().getName().equals("IfcAbsorbedDoseMeasure")) {
 				SetAttributeSubIfcAbsorbedDoseMeasure setAttributeSubIfcAbsorbedDoseMeasure = new SetAttributeSubIfcAbsorbedDoseMeasure(object, attributeName, attributeNewValue);

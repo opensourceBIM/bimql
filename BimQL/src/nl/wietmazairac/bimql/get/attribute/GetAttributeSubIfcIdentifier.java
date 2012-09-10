@@ -1,11 +1,8 @@
 package nl.wietmazairac.bimql.get.attribute;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import org.bimserver.ifc.*;
-import org.bimserver.emf.*;
-import org.bimserver.models.ifc2x3.*;
+import org.bimserver.models.ifc2x3tc1.IfcIdentifier;
 
 public class GetAttributeSubIfcIdentifier {
 	// fields
