@@ -68,11 +68,5 @@ public class SetAttributeSubIfcEngine {
 			 //1void
 			 //1boolean
 		}
-		else if (attributeName.equals("Active")) {
-			//1NoEList
-			((IfcEngine) object).setActive(Boolean.parseBoolean(attributeNewValue));
-			 //1void
-			 //1boolean
-		}
 	}
 }
