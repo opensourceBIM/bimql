@@ -3,8 +3,6 @@ package nl.wietmazairac.bimql;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.emf.ecore.EObject;
-
 public class FlattenList {
 	
 	// fields	

@@ -100,7 +100,6 @@ import org.bimserver.models.ifc2x3tc1.impl.IfcVolumeMeasureImpl;
 import org.bimserver.models.ifc2x3tc1.impl.IfcVolumetricFlowRateMeasureImpl;
 import org.bimserver.models.ifc2x3tc1.impl.IfcWarpingConstantMeasureImpl;
 import org.bimserver.models.ifc2x3tc1.impl.IfcWarpingMomentMeasureImpl;
-import org.eclipse.emf.ecore.EObject;
 
 public class GetPropertyMain {
 	// fields

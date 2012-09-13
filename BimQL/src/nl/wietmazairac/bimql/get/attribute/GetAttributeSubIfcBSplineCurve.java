@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.bimserver.models.ifc2x3tc1.IfcBSplineCurve;
-import org.eclipse.emf.ecore.EObject;
 
 public class GetAttributeSubIfcBSplineCurve {
 	// fields

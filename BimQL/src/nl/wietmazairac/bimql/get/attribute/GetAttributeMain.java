@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.bimserver.ifc.IfcModel;
 import org.bimserver.models.ifc2x3tc1.IfcRoot;
-import org.eclipse.emf.ecore.EObject;
 
 public class GetAttributeMain {
 	// fields
@@ -43,7 +42,7 @@ public class GetAttributeMain {
 		this.ifcModel = ifcModel;
 	}
 
-	public List getList() {
+	public List<?> getList() {
 		return ifcRootList;
 	}
 

@@ -26,7 +26,6 @@ import org.bimserver.plugins.ifcengine.IfcEngine;
 import org.bimserver.plugins.schema.SchemaPlugin;
 import org.bimserver.plugins.serializers.ProjectInfo;
 import org.bimserver.plugins.serializers.SerializerException;
-import org.eclipse.emf.ecore.EObject;
 
 public class BimQLTest {
 
@@ -162,7 +161,7 @@ public class BimQLTest {
 		System.out.println();
 	}
 
-	public static Class[] getClasses(String packageName) {
+	public static Class<?>[] getClasses(String packageName) {
 		try {
 			ClassLoader classLoader = Thread.currentThread()
 					.getContextClassLoader();
@@ -178,7 +177,7 @@ public class BimQLTest {
 			for (String directory : dirs) {
 				classes.addAll(findClasses(directory, packageName));
 			}
-			ArrayList<Class> classList = new ArrayList<Class>();
+			ArrayList<Class<?>> classList = new ArrayList<Class<?>>();
 			for (String clazz : classes) {
 				classList.add(Class.forName(clazz));
 			}
