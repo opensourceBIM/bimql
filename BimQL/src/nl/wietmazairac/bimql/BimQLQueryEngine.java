@@ -9,18 +9,17 @@ import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.TokenStream;
 import org.bimserver.emf.IdEObject;
 import org.bimserver.emf.IfcModelInterface;
+import org.bimserver.emf.IfcModelInterfaceException;
 import org.bimserver.ifc.IfcModel;
-import org.bimserver.plugins.QueryEngineHelper;
+import org.bimserver.plugins.ModelHelper;
 import org.bimserver.plugins.Reporter;
 import org.bimserver.plugins.queryengine.QueryEngine;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.bimserver.plugins.queryengine.QueryEngineException;
 
 public class BimQLQueryEngine implements QueryEngine {
-	private static final Logger LOGGER = LoggerFactory.getLogger(BimQLQueryEngine.class);
 
 	@Override
-	public IfcModelInterface query(IfcModelInterface model, String code, final Reporter reporter, QueryEngineHelper queryEngineHelper) {
+	public IfcModelInterface query(IfcModelInterface model, String code, final Reporter reporter, ModelHelper modelHelper) throws QueryEngineException {
 		CharStream charStream = new ANTLRStringStream(code);
 		BimQLLexer lexer = new BimQLLexer(charStream) {
 			@Override
@@ -47,14 +46,15 @@ public class BimQLQueryEngine implements QueryEngine {
 			if (result != null) {
 				for (Object object : result) {
 					if (object instanceof IdEObject) {
-						queryEngineHelper.copy((IdEObject)object, resultModel);
+						modelHelper.copy((IdEObject)object, resultModel);
 					}
 				}
 			}
 			return resultModel;
 		} catch (RecognitionException e) {
-			LOGGER.error("", e);
+			throw new QueryEngineException(e);
+		} catch (IfcModelInterfaceException e) {
+			throw new QueryEngineException(e);
 		}
-		return null;
 	}
 }
