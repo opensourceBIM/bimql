@@ -42,7 +42,7 @@ public class BimQLQueryEnginePlugin implements QueryEnginePlugin {
 	}
 
 	@Override
-	public String getDefaultQueryEngineName() {
+	public String getDefaultName() {
 		return "BimQL Engine";
 	}
 
