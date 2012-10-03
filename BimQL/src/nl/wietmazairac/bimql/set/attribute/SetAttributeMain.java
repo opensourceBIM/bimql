@@ -3060,10 +3060,6 @@ public class SetAttributeMain {
 				SetAttributeSubIfcZone setAttributeSubIfcZone = new SetAttributeSubIfcZone(object, attributeName, attributeNewValue);
 				setAttributeSubIfcZone.setAttribute();
 			}
-			else if (((IfcRoot) object).eClass().getName().equals("IfcEngine")) {
-				SetAttributeSubIfcEngine setAttributeSubIfcEngine = new SetAttributeSubIfcEngine(object, attributeName, attributeNewValue);
-				setAttributeSubIfcEngine.setAttribute();
-			}
 			else if (((IfcRoot) object).eClass().getName().equals("IfcEnginePluginDescriptor")) {
 				SetAttributeSubIfcEnginePluginDescriptor setAttributeSubIfcEnginePluginDescriptor = new SetAttributeSubIfcEnginePluginDescriptor(object, attributeName, attributeNewValue);
 				setAttributeSubIfcEnginePluginDescriptor.setAttribute();
