@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.bimserver.models.store.ObjectDefinition;
 import org.bimserver.plugins.PluginException;
 import org.bimserver.plugins.PluginManager;
 import org.bimserver.plugins.queryengine.QueryEngine;
@@ -54,5 +55,10 @@ public class BimQLQueryEnginePlugin implements QueryEnginePlugin {
 	@Override
 	public String getExample(String key) {
 		return examples.get(key);
+	}
+
+	@Override
+	public ObjectDefinition getSettingsDefinition() {
+		return null;
 	}
 }
