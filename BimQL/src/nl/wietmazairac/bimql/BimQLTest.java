@@ -269,7 +269,7 @@ public class BimQLTest {
 		}
 
 		try {
-			writer.init(ifcModel, projectInfo, pluginManager, ifcEngine);
+			writer.init(ifcModel, projectInfo, pluginManager, ifcEngine, false);
 			writer.writeToFile(new File(ifcFile));
 		} catch (SerializerException e) {
 			e.printStackTrace();
