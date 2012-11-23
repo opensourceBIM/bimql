@@ -22,7 +22,6 @@ import org.bimserver.ifc.step.serializer.IfcStepSerializer;
 import org.bimserver.plugins.PluginException;
 import org.bimserver.plugins.PluginManager;
 import org.bimserver.plugins.deserializers.DeserializeException;
-import org.bimserver.plugins.ifcengine.IfcEngine;
 import org.bimserver.plugins.schema.SchemaPlugin;
 import org.bimserver.plugins.serializers.ProjectInfo;
 import org.bimserver.plugins.serializers.SerializerException;
@@ -254,7 +253,6 @@ public class BimQLTest {
 		IfcStepSerializer writer = new IfcStepSerializer();
 		ProjectInfo projectInfo = new ProjectInfo();
 		PluginManager pluginManager = new PluginManager();
-		IfcEngine ifcEngine = null;
 
 		File projectRoot = new File(
 				"C:\\Users\\Wiet\\Dropbox\\workspace\\buildingSMARTLibrary");
@@ -269,7 +267,7 @@ public class BimQLTest {
 		}
 
 		try {
-			writer.init(ifcModel, projectInfo, pluginManager, ifcEngine, false);
+			writer.init(ifcModel, projectInfo, pluginManager, null, false);
 			writer.writeToFile(new File(ifcFile));
 		} catch (SerializerException e) {
 			e.printStackTrace();
