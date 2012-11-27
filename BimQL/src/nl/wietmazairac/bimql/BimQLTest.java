@@ -16,6 +16,7 @@ import org.antlr.runtime.CharStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.TokenStream;
+import org.bimserver.emf.IfcModelInterface;
 import org.bimserver.ifc.IfcModel;
 import org.bimserver.ifc.step.deserializer.IfcStepDeserializer;
 import org.bimserver.ifc.step.serializer.IfcStepSerializer;
@@ -32,7 +33,7 @@ public class BimQLTest {
 
 		// L O A D M O D E L
 
-		IfcModel ifcModel = new IfcModel();
+		IfcModelInterface ifcModel = new IfcModel();
 		ifcModel = importModel("Clinic_A_20110906.ifc");
 
 		// E X A M P L E S S E L E C T
@@ -236,10 +237,10 @@ public class BimQLTest {
 		return classes;
 	}
 
-	public static IfcModel importModel(String ifcFile) {
+	public static IfcModelInterface importModel(String ifcFile) {
 		IfcStepDeserializer reader = new IfcStepDeserializer();
 
-		IfcModel ifcModel = new IfcModel();
+		IfcModelInterface ifcModel = new IfcModel();
 		reader.init(new SchemaLoader("Ifc2x3_TC1.exp").getSchema());
 		try {
 			ifcModel = reader.read(new File(ifcFile), false);
