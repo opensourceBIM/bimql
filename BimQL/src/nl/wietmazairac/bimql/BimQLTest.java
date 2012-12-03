@@ -243,7 +243,7 @@ public class BimQLTest {
 		IfcModelInterface ifcModel = new IfcModel();
 		reader.init(new SchemaLoader("Ifc2x3_TC1.exp").getSchema());
 		try {
-			ifcModel = reader.read(new File(ifcFile), false);
+			ifcModel = reader.read(new File(ifcFile));
 		} catch (DeserializeException e) {
 			e.printStackTrace();
 		}
