@@ -9,6 +9,7 @@ import org.bimserver.plugins.PluginException;
 import org.bimserver.plugins.PluginManager;
 import org.bimserver.plugins.queryengine.QueryEngine;
 import org.bimserver.plugins.queryengine.QueryEnginePlugin;
+import org.bimserver.plugins.serializers.PluginConfiguration;
 
 public class BimQLQueryEnginePlugin implements QueryEnginePlugin {
 
@@ -45,7 +46,7 @@ public class BimQLQueryEnginePlugin implements QueryEnginePlugin {
 	}
 
 	@Override
-	public QueryEngine getQueryEngine() {
+	public QueryEngine getQueryEngine(PluginConfiguration pluginConfiguration) {
 		return new BimQLQueryEngine();
 	}
 

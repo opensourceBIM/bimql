@@ -24,6 +24,7 @@ import org.bimserver.plugins.PluginException;
 import org.bimserver.plugins.PluginManager;
 import org.bimserver.plugins.deserializers.DeserializeException;
 import org.bimserver.plugins.schema.SchemaPlugin;
+import org.bimserver.plugins.serializers.PluginConfiguration;
 import org.bimserver.plugins.serializers.ProjectInfo;
 import org.bimserver.plugins.serializers.SerializerException;
 
@@ -251,7 +252,7 @@ public class BimQLTest {
 	}
 
 	public static void exportModel(IfcModel ifcModel, String ifcFile) {
-		IfcStepSerializer writer = new IfcStepSerializer();
+		IfcStepSerializer writer = new IfcStepSerializer(new PluginConfiguration());
 		ProjectInfo projectInfo = new ProjectInfo();
 		PluginManager pluginManager = new PluginManager();
 
