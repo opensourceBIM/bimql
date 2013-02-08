@@ -34,7 +34,7 @@ public class BimQLTest {
 		// L O A D M O D E L
 
 		IfcModelInterface ifcModel = new IfcModel();
-		ifcModel = importModel("Clinic_A_20110906.ifc");
+		ifcModel = importModel("J:\\data\\ifc\\AC9R1-Haus-G-H-Ver2-2x3.ifc");
 
 		// E X A M P L E S S E L E C T
 
@@ -43,7 +43,10 @@ public class BimQLTest {
 		// CharStream charStream = new
 		// ANTLRStringStream("Select $Var1 Where $Var1.EntityType = IfcDoor");
 		CharStream charStream = new ANTLRStringStream(
-				"Select $Var1 Where $Var1.Attribute.GlobalId = 1qc5HjZvrCsga38tqxQ3VC");
+			//	"Select $Var1 Where $Var1.Attribute.GlobalId = 0PQ5NuP0bFX9LWIF1Gb1Nx");
+//				"Select $Var1 Where $Var1:Storey = Obergeschoss Or $Var1:Verdieping = Erdgeschoss And $Var1.EntityType = IfcDoor" );
+	"Select $Var1 Where $Var1:isA = Fenster" );
+
 		// CharStream charStream = new
 		// ANTLRStringStream("Select $Var1 Where $Var1.Attribute.GlobalId = 1*");
 		// CharStream charStream = new
@@ -70,11 +73,19 @@ public class BimQLTest {
 
 		BimQLLexer lexer = new BimQLLexer(charStream);
 		TokenStream tokenStream = new CommonTokenStream(lexer);
-		BimQLParser parser = new BimQLParser(tokenStream);
-
+		
+		
+		ArrayList<BIMQLGrammarPlugin> plugins=new ArrayList<BIMQLGrammarPlugin>();
+		StoreyPlugin sp = new StoreyPlugin();
+		plugins.add(sp);
+		IsAPlugin ip = new IsAPlugin();
+		plugins.add(ip);
+		BimQLParser parser = new BimQLParser(tokenStream,plugins);
+		
+		
 		List<Object> result;
 		System.out.println("Start searching");
-		result = parser.bimql(ifcModel);
+		result = parser.bimql((IfcModel)ifcModel);
 		System.out.println("Stop searching");
 		System.out.println();
 		for (Object object : result) {
@@ -103,7 +114,7 @@ public class BimQLTest {
 
 		List<Object> result2;
 		System.out.println("Start searching");
-		result2 = parser2.bimql(ifcModel);
+		result2 = parser2.bimql((IfcModel)ifcModel);
 		System.out.println("Stop searching");
 		System.out.println();
 		for (Object object : result2) {
@@ -125,7 +136,7 @@ public class BimQLTest {
 
 		List<Object> result3;
 		System.out.println("Start searching");
-		result3 = parser3.bimql(ifcModel);
+		result3 = parser3.bimql((IfcModel)ifcModel);
 		System.out.println("Stop searching");
 		System.out.println();
 		for (Object object : result3) {
@@ -147,7 +158,7 @@ public class BimQLTest {
 
 		List<Object> result4;
 		System.out.println("Start searching");
-		result4 = parser4.bimql(ifcModel);
+		result4 = parser4.bimql((IfcModel)ifcModel);
 		System.out.println("Stop searching");
 		System.out.println();
 		for (Object object : result4) {

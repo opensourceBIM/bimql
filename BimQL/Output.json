@@ -1,0 +1,1001 @@
+{
+  "IfcControllerType": [
+    "IfcControllerType",
+    "controller type",
+    "IfcControllerType",
+    "controller type"
+  ],
+  "IfcElementComponentType": [
+    "IfcElementComponentType",
+    "element component type",
+    "IfcElementComponentType",
+    "element component type"
+  ],
+  "IfcTransformerType": [
+    "IfcTransformerType",
+    "transformer type",
+    "IfcTransformerType",
+    "transformer type"
+  ],
+  "IfcPumpType": [
+    "IfcPumpType",
+    "pump type",
+    "IfcPumpType",
+    "pump type"
+  ],
+  "IfcCableCarrierSegmentType": [
+    "IfcCableCarrierSegmentType",
+    "cable carrier segment type",
+    "IfcCableCarrierSegmentType",
+    "cable carrier segment type"
+  ],
+  "IfcFurnitureType": [
+    "IfcFurnitureType",
+    "furniture type",
+    "IfcFurnitureType",
+    "furniture type"
+  ],
+  "IfcWallType": [
+    "IfcWallType",
+    "wall type",
+    "IfcWallType",
+    "wall type"
+  ],
+  "IfcJunctionBoxType": [
+    "IfcJunctionBoxType",
+    "junction box type",
+    "IfcJunctionBoxType",
+    "junction box type"
+  ],
+  "IfcFireSuppressionTerminalType": [
+    "IfcFireSuppressionTerminalType",
+    "fire suppression terminal type",
+    "IfcFireSuppressionTerminalType",
+    "fire suppression terminal type"
+  ],
+  "IfcWorkControl": [
+    "IfcWorkControl",
+    "work control",
+    "IfcWorkControl",
+    "work control"
+  ],
+  "IfcDistributionChamberElementType": [
+    "IfcDistributionChamberElementType",
+    "distribution chamber element type",
+    "IfcDistributionChamberElementType",
+    "distribution chamber element type"
+  ],
+  "IfcPlate": [
+    "IfcPlate",
+    "plate",
+    "Baffle",
+    "plate",
+    "absorbeur suspendu",
+    "baffle",
+    "batt",
+    "plate",
+    "plate",
+    "plate",
+    "IfcPlate",
+    "plate",
+    "Plate",
+    "Plaat",
+    "Plaat",
+    "Sign",
+    "Notice",
+    "Plate",
+    "Bord"
+  ],
+  "IfcElementType": [
+    "IfcElementType",
+    "element type",
+    "IfcElementType",
+    "element type"
+  ],
+  "IfcWorkPlan": [
+    "IfcWorkPlan",
+    "work plan",
+    "IfcWorkPlan",
+    "work plan"
+  ],
+  "IfcFastenerType": [
+    "IfcFastenerType",
+    "fastener type",
+    "IfcFastenerType",
+    "fastener type"
+  ],
+  "IfcDuctSegmentType": [
+    "IfcDuctSegmentType",
+    "duct segment type",
+    "IfcDuctSegmentType",
+    "duct segment type"
+  ],
+  "IfcPipeSegmentType": [
+    "IfcPipeSegmentType",
+    "pipe segment type",
+    "IfcPipeSegmentType",
+    "pipe segment type"
+  ],
+  "IfcCoveringType": [
+    "IfcCoveringType",
+    "covering type",
+    "IfcCoveringType",
+    "covering type"
+  ],
+  "IfcStairFlight": [
+    "IfcStairFlight",
+    "stair flight",
+    "stair flight",
+    "trapp",
+    "volée d?escalier",
+    "Treppenlauf",
+    "IfcStairFlight",
+    "stair flight",
+    "Trap",
+    "Stair flight",
+    "Trapslag",
+    "Trap",
+    "Stair flight",
+    "Trapslag",
+    "Trap",
+    "Stair",
+    "Stair flight",
+    "Trapslag"
+  ],
+  "IfcSanitaryTerminalType": [
+    "IfcSanitaryTerminalType",
+    "sanitary terminal type",
+    "IfcSanitaryTerminalType",
+    "sanitary terminal type"
+  ],
+  "IfcWall": [
+    "IfcWall",
+    "wall",
+    "wall",
+    "Wand",
+    "paroi",
+    "mur",
+    "Wand",
+    "vegg",
+    "parede",
+    "IfcWall",
+    "wall"
+  ],
+  "IfcFanType": [
+    "IfcFanType",
+    "fan type",
+    "IfcFanType",
+    "fan type"
+  ],
+  "IfcWasteTerminalType": [
+    "IfcWasteTerminalType",
+    "waste terminal type",
+    "IfcWasteTerminalType",
+    "waste terminal type"
+  ],
+  "IfcSlab": [
+    "IfcSlab",
+    "slab",
+    "board",
+    "slab",
+    "stiv plate",
+    "Vloer",
+    "Floor",
+    "Slab",
+    "slab",
+    "bakhun",
+    "dosse",
+    "Schwarte",
+    "IfcSlab",
+    "slab",
+    "Vloer",
+    "Floor",
+    "Slab"
+  ],
+  "IfcCompressorType": [
+    "IfcCompressorType",
+    "compressor type",
+    "IfcCompressorType",
+    "compressor type"
+  ],
+  "IfcMotorConnectionType": [
+    "IfcMotorConnectionType",
+    "motor connection type",
+    "IfcMotorConnectionType",
+    "motor connection type"
+  ],
+  "IfcBuildingStorey": [
+    "IfcBuildingStorey",
+    "building storey",
+    "Bouwlaag",
+    "Building storey",
+    "Verdieping",
+    "Bouwlaag",
+    "Building storey",
+    "Verdieping",
+    "IfcBuildingStorey",
+    "building storey"
+  ],
+  "IfcWindow": [
+    "window",
+    "IfcWindow",
+    "fenêtre",
+    "Fenster",
+    "windowset",
+    "?",
+    "vindu",
+    "window",
+    "IfcWindow",
+    "fenêtre",
+    "Fenster",
+    "windowset",
+    "?",
+    "vindu"
+  ],
+  "IfcMechanicalFastener": [
+    "IfcMechanicalFastener",
+    "mechanical fastener",
+    "IfcMechanicalFastener",
+    "mechanical fastener"
+  ],
+  "IfcEvaporativeCoolerType": [
+    "IfcEvaporativeCoolerType",
+    "evaporative cooler type",
+    "IfcEvaporativeCoolerType",
+    "evaporative cooler type"
+  ],
+  "IfcDuctFittingType": [
+    "IfcDuctFittingType",
+    "duct fitting type",
+    "IfcDuctFittingType",
+    "duct fitting type"
+  ],
+  "IfcSite": [
+    "IfcSite",
+    "site",
+    "site",
+    "byggeplass",
+    "site",
+    "Baustelle",
+    "site",
+    "tomt",
+    "Gelände",
+    "IfcSite",
+    "site",
+    "Terrein",
+    "Site"
+  ],
+  "IfcTransportElement": [
+    "IfcTransportElement",
+    "transport element",
+    "IfcTransportElement",
+    "transport element"
+  ],
+  "IfcCableSegmentType": [
+    "IfcCableSegmentType",
+    "cable segment type",
+    "IfcCableSegmentType",
+    "cable segment type"
+  ],
+  "IfcFooting": [
+    "IfcFooting",
+    "footing",
+    "Footing",
+    "Funderingsvoet",
+    "IfcFooting",
+    "footing"
+  ],
+  "IfcElectricGeneratorType": [
+    "IfcElectricGeneratorType",
+    "electric generator type",
+    "IfcElectricGeneratorType",
+    "electric generator type"
+  ],
+  "IfcPipeFittingType": [
+    "IfcPipeFittingType",
+    "pipe fitting type",
+    "IfcPipeFittingType",
+    "pipe fitting type"
+  ],
+  "IfcDuctSilencerType": [
+    "IfcDuctSilencerType",
+    "duct silencer type",
+    "IfcDuctSilencerType",
+    "duct silencer type"
+  ],
+  "IfcPile": [
+    "IfcPile",
+    "pile",
+    "pile",
+    "pel",
+    "pieu",
+    "Pfahl",
+    "pile",
+    "pæl",
+    "IfcPile",
+    "pile",
+    "stack \u003csubst\u003e",
+    "stabel",
+    "pile",
+    "Stapel"
+  ],
+  "IfcActionRequest": [
+    "IfcActionRequest",
+    "action request",
+    "IfcActionRequest",
+    "action request"
+  ],
+  "IfcWallStandardCase": [
+    "IfcWallStandardCase",
+    "wall standard case",
+    "IfcWallStandardCase",
+    "wall standard case"
+  ],
+  "IfcBeam": [
+    "IfcBeam",
+    "beam",
+    "beam",
+    "bjelke",
+    "poutre",
+    "Biegeträger",
+    "Balken",
+    "beam",
+    "bomarm",
+    "Balken",
+    "lisse",
+    "IfcBeam",
+    "beam",
+    "Balk",
+    "Beam",
+    "Ligger",
+    "Balk",
+    "Beam",
+    "Ligger"
+  ],
+  "IfcCurtainWall": [
+    "IfcCurtainWall",
+    "curtain wall",
+    "Gordijngevel",
+    "Curtain wall",
+    "IfcCurtainWall",
+    "curtain wall"
+  ],
+  "IfcLightFixtureType": [
+    "IfcLightFixtureType",
+    "light fixture type",
+    "IfcLightFixtureType",
+    "light fixture type"
+  ],
+  "IfcValveType": [
+    "IfcValveType",
+    "valve type",
+    "IfcValveType",
+    "valve type"
+  ],
+  "IfcConstructionResource": [
+    "IfcConstructionResource",
+    "construction resource",
+    "IfcConstructionResource",
+    "construction resource"
+  ],
+  "IfcActuatorType": [
+    "IfcActuatorType",
+    "actuator type",
+    "IfcActuatorType",
+    "actuator type"
+  ],
+  "IfcCableCarrierFittingType": [
+    "IfcCableCarrierFittingType",
+    "cable carrier fitting type",
+    "IfcCableCarrierFittingType",
+    "cable carrier fitting type"
+  ],
+  "IfcStair": [
+    "IfcStair",
+    "stair",
+    "Trap",
+    "Stair",
+    "Stair flight",
+    "Trapslag",
+    "IfcStair",
+    "stair"
+  ],
+  "IfcProtectiveDeviceType": [
+    "IfcProtectiveDeviceType",
+    "protective device type",
+    "IfcProtectiveDeviceType",
+    "protective device type"
+  ],
+  "IfcHeatExchangerType": [
+    "IfcHeatExchangerType",
+    "heat exchanger type",
+    "IfcHeatExchangerType",
+    "heat exchanger type"
+  ],
+  "IfcPerformanceHistory": [
+    "IfcPerformanceHistory",
+    "performance history",
+    "IfcPerformanceHistory",
+    "performance history"
+  ],
+  "IfcColumnType": [
+    "IfcColumnType",
+    "column type",
+    "IfcColumnType",
+    "column type"
+  ],
+  "IfcCooledBeamType": [
+    "IfcCooledBeamType",
+    "cooled beam type",
+    "IfcCooledBeamType",
+    "cooled beam type"
+  ],
+  "IfcZone": [
+    "IfcZone",
+    "zone",
+    "zone",
+    "sone",
+    "zone",
+    "Meldebereich (Zone)",
+    "Meldergruppe",
+    "Zone",
+    "Zone",
+    "Building section",
+    "Gebouwdeel",
+    "IfcZone",
+    "zone",
+    "Building section",
+    "Gebouwdeel",
+    "Zone",
+    "Zone",
+    "Compartiment"
+  ],
+  "IfcRamp": [
+    "IfcRamp",
+    "ramp",
+    "rampe",
+    "skråplan",
+    "ramp",
+    "IfcRamp",
+    "ramp",
+    "Helling",
+    "Ramp",
+    "Hellingbaan",
+    "Helling",
+    "Ramp",
+    "Hellingbaan"
+  ],
+  "IfcRailingType": [
+    "IfcRailingType",
+    "railing type",
+    "IfcRailingType",
+    "railing type"
+  ],
+  "IfcElectricTimeControlType": [
+    "IfcElectricTimeControlType",
+    "electric time control type",
+    "IfcElectricTimeControlType",
+    "electric time control type"
+  ],
+  "IfcStairFlightType": [
+    "IfcStairFlightType",
+    "stair flight type",
+    "IfcStairFlightType",
+    "stair flight type"
+  ],
+  "IfcMemberType": [
+    "IfcMemberType",
+    "member type",
+    "IfcMemberType",
+    "member type"
+  ],
+  "IfcTankType": [
+    "IfcTankType",
+    "tank type",
+    "IfcTankType",
+    "tank type"
+  ],
+  "IfcDistributionChamberElement": [
+    "IfcDistributionChamberElement",
+    "distribution chamber element",
+    "IfcDistributionChamberElement",
+    "distribution chamber element"
+  ],
+  "IfcFlowInstrumentType": [
+    "IfcFlowInstrumentType",
+    "flow instrument type",
+    "IfcFlowInstrumentType",
+    "flow instrument type"
+  ],
+  "IfcAirToAirHeatRecoveryType": [
+    "IfcAirToAirHeatRecoveryType",
+    "air to air heat recovery type",
+    "IfcAirToAirHeatRecoveryType",
+    "air to air heat recovery type"
+  ],
+  "IfcEvaporatorType": [
+    "IfcEvaporatorType",
+    "evaporator type",
+    "IfcEvaporatorType",
+    "evaporator type"
+  ],
+  "IfcMember": [
+    "IfcMember",
+    "member",
+    "IfcMember",
+    "member"
+  ],
+  "IfcDamperType": [
+    "IfcDamperType",
+    "damper type",
+    "IfcDamperType",
+    "damper type"
+  ],
+  "IfcDistributionPort": [
+    "IfcDistributionPort",
+    "distribution port",
+    "IfcDistributionPort",
+    "distribution port"
+  ],
+  "IfcFastener": [
+    "IfcFastener",
+    "fastener",
+    "fastener",
+    "festeinnretning",
+    "IfcFastener",
+    "fastener"
+  ],
+  "IfcCondenserType": [
+    "IfcCondenserType",
+    "condenser type",
+    "IfcCondenserType",
+    "condenser type"
+  ],
+  "IfcVibrationIsolatorType": [
+    "IfcVibrationIsolatorType",
+    "vibration isolator type",
+    "IfcVibrationIsolatorType",
+    "vibration isolator type"
+  ],
+  "IfcChillerType": [
+    "IfcChillerType",
+    "chiller type",
+    "IfcChillerType",
+    "chiller type"
+  ],
+  "IfcCurtainWallType": [
+    "IfcCurtainWallType",
+    "curtain wall type",
+    "IfcCurtainWallType",
+    "curtain wall type"
+  ],
+  "IfcFlowMeterType": [
+    "IfcFlowMeterType",
+    "flow meter type",
+    "IfcFlowMeterType",
+    "flow meter type"
+  ],
+  "IfcWorkSchedule": [
+    "IfcWorkSchedule",
+    "work schedule",
+    "IfcWorkSchedule",
+    "work schedule"
+  ],
+  "IfcActor": [
+    "IfcActor",
+    "actor",
+    "IfcActor",
+    "actor"
+  ],
+  "IfcPermit": [
+    "IfcPermit",
+    "permit",
+    "IfcPermit",
+    "permit"
+  ],
+  "IfcCovering": [
+    "IfcCovering",
+    "covering",
+    "covering",
+    "trekk",
+    "revêtement",
+    "Abdeckung",
+    "covering",
+    "kledning",
+    "IfcCovering",
+    "covering",
+    "bekledning",
+    "Covering",
+    "Finishing",
+    "Bekleding",
+    "Afwerking",
+    "Covering",
+    "Bekleding",
+    "Cladding",
+    "Lining",
+    "Panelling",
+    "Aftimmering",
+    "Covering",
+    "Overkapping",
+    "Afdak",
+    "Shelter"
+  ],
+  "IfcAlarmType": [
+    "IfcAlarmType",
+    "alarm type",
+    "IfcAlarmType",
+    "alarm type"
+  ],
+  "IfcSlabType": [
+    "IfcSlabType",
+    "slab type",
+    "IfcSlabType",
+    "slab type"
+  ],
+  "IfcBuilding": [
+    "IfcBuilding",
+    "building",
+    "building",
+    "bygning",
+    "bâtiment",
+    "Gebäude",
+    "IfcBuilding",
+    "building",
+    "Building",
+    "Gebouw"
+  ],
+  "IfcDiscreteAccessoryType": [
+    "IfcDiscreteAccessoryType",
+    "discrete accessory type",
+    "IfcDiscreteAccessoryType",
+    "discrete accessory type"
+  ],
+  "IfcOutletType": [
+    "IfcOutletType",
+    "outlet type",
+    "IfcOutletType",
+    "outlet type"
+  ],
+  "IfcBeamType": [
+    "IfcBeamType",
+    "beam type",
+    "IfcBeamType",
+    "beam type"
+  ],
+  "IfcCoolingTowerType": [
+    "IfcCoolingTowerType",
+    "cooling tower type",
+    "IfcCoolingTowerType",
+    "cooling tower type"
+  ],
+  "IfcColumn": [
+    "IfcColumn",
+    "column",
+    "column",
+    "søyle",
+    "poteau",
+    "Druckstab",
+    "Stütze",
+    "IfcColumn",
+    "column",
+    "Kolom",
+    "Column"
+  ],
+  "IfcAirTerminalBoxType": [
+    "IfcAirTerminalBoxType",
+    "air terminal box type",
+    "IfcAirTerminalBoxType",
+    "air terminal box type"
+  ],
+  "IfcTubeBundleType": [
+    "IfcTubeBundleType",
+    "tube bundle type",
+    "IfcTubeBundleType",
+    "tube bundle type"
+  ],
+  "IfcSwitchingDeviceType": [
+    "IfcSwitchingDeviceType",
+    "switching device type",
+    "IfcSwitchingDeviceType",
+    "switching device type"
+  ],
+  "IfcAsset": [
+    "IfcAsset",
+    "asset",
+    "IfcAsset",
+    "asset"
+  ],
+  "IfcLampType": [
+    "IfcLampType",
+    "lamp type",
+    "IfcLampType",
+    "lamp type"
+  ],
+  "IfcPlateType": [
+    "IfcPlateType",
+    "plate type",
+    "IfcPlateType",
+    "plate type"
+  ],
+  "IfcSpaceHeaterType": [
+    "IfcSpaceHeaterType",
+    "space heater type",
+    "IfcSpaceHeaterType",
+    "space heater type"
+  ],
+  "IfcDoorStyle": [
+    "IfcDoorStyle",
+    "door style",
+    "IfcDoorStyle",
+    "door style"
+  ],
+  "IfcProjectOrder": [
+    "IfcProjectOrder",
+    "project order",
+    "prosjekt ordre",
+    "Bestellung",
+    "project order",
+    "order",
+    "bestilling",
+    "IfcProjectOrder",
+    "project order"
+  ],
+  "IfcDoor": [
+    "door set",
+    "dør med karm",
+    "bloc-porte",
+    "Türeinheit (von einem Anbieter)",
+    "Deur",
+    "door",
+    "IfcDoor",
+    "door set",
+    "dør med karm",
+    "bloc-porte",
+    "Türeinheit (von einem Anbieter)",
+    "Deur",
+    "door",
+    "IfcDoor",
+    "Door panel",
+    "dørblad",
+    "tablier",
+    "Torflügel",
+    "Deurblad",
+    "Deur",
+    "porta",
+    "Door leaf",
+    "door"
+  ],
+  "IfcSpaceType": [
+    "IfcSpaceType",
+    "space type",
+    "IfcSpaceType",
+    "space type"
+  ],
+  "IfcSpace": [
+    "IfcSpace",
+    "space",
+    "Compartment",
+    "Rom",
+    "Compartiment",
+    "Fach",
+    "Room",
+    "Vertrek",
+    "Containment system",
+    "Space",
+    "Behuizing",
+    "Ruimteaccommodatie",
+    "Behuizing",
+    "Housing",
+    "Room",
+    "Ruimte",
+    "Space",
+    "Accommodation",
+    "Accommodatie",
+    "Use space",
+    "Gebruiksruimte",
+    "Ruimte",
+    "Space",
+    "Void",
+    "Leegte",
+    "Ruimte",
+    "Space",
+    "IfcSpace",
+    "space"
+  ],
+  "IfcElectricApplianceType": [
+    "IfcElectricApplianceType",
+    "electric appliance type",
+    "IfcElectricApplianceType",
+    "electric appliance type"
+  ],
+  "IfcRampFlight": [
+    "IfcRampFlight",
+    "ramp flight",
+    "IfcRampFlight",
+    "ramp flight"
+  ],
+  "IfcTransportElementType": [
+    "IfcTransportElementType",
+    "transport element type",
+    "IfcTransportElementType",
+    "transport element type"
+  ],
+  "IfcElectricFlowStorageDeviceType": [
+    "IfcElectricFlowStorageDeviceType",
+    "electric flow storage device type",
+    "IfcElectricFlowStorageDeviceType",
+    "electric flow storage device type"
+  ],
+  "IfcStackTerminalType": [
+    "IfcStackTerminalType",
+    "stack terminal type",
+    "IfcStackTerminalType",
+    "stack terminal type"
+  ],
+  "IfcRampFlightType": [
+    "IfcRampFlightType",
+    "ramp flight type",
+    "IfcRampFlightType",
+    "ramp flight type"
+  ],
+  "IfcBoilerType": [
+    "IfcBoilerType",
+    "boiler type",
+    "IfcBoilerType",
+    "boiler type"
+  ],
+  "IfcWindowStyle": [
+    "IfcWindowStyle",
+    "window style",
+    "IfcWindowStyle",
+    "window style"
+  ],
+  "IfcUnitaryEquipmentType": [
+    "IfcUnitaryEquipmentType",
+    "unitary equipment type",
+    "IfcUnitaryEquipmentType",
+    "unitary equipment type"
+  ],
+  "IfcSensorType": [
+    "IfcSensorType",
+    "sensor type",
+    "IfcSensorType",
+    "sensor type"
+  ],
+  "IfcSystemFurnitureElementType": [
+    "IfcSystemFurnitureElementType",
+    "system furniture element type",
+    "IfcSystemFurnitureElementType",
+    "system furniture element type"
+  ],
+  "IfcElement": [
+    "IfcElement",
+    "element",
+    "element",
+    "element",
+    "élément",
+    "Einzelteil",
+    "sensor",
+    "element",
+    "element",
+    "élément",
+    "Einzelteil",
+    "IfcElement",
+    "element",
+    "system",
+    "system",
+    "système",
+    "System",
+    "Service",
+    "Systeem",
+    "Element",
+    "Part",
+    "Onderdeel",
+    "Element",
+    "Element",
+    "Component",
+    "Component"
+  ],
+  "IfcAnnotation": [
+    "IfcAnnotation",
+    "annotation",
+    "Annotation",
+    "Annotatie",
+    "IfcAnnotation",
+    "annotation"
+  ],
+  "IfcFilterType": [
+    "IfcFilterType",
+    "filter type",
+    "IfcFilterType",
+    "filter type"
+  ],
+  "IfcOpeningElement": [
+    "IfcOpeningElement",
+    "opening element",
+    "Opening element",
+    "Openingselement",
+    "IfcOpeningElement",
+    "opening element"
+  ],
+  "IfcDistributionFlowElement": [
+    "IfcDistributionFlowElement",
+    "distribution flow element",
+    "IfcDistributionFlowElement",
+    "distribution flow element"
+  ],
+  "IfcRoof": [
+    "IfcRoof",
+    "roof",
+    "roof",
+    "Tak",
+    "toiture",
+    "Dach",
+    "Dak",
+    "??",
+    "IfcRoof",
+    "roof",
+    "Dak",
+    "Roof",
+    "Dak",
+    "Roof"
+  ],
+  "IfcElementComponent": [
+    "IfcElementComponent",
+    "element component",
+    "IfcElementComponent",
+    "element component"
+  ],
+  "IfcRailing": [
+    "IfcRailing",
+    "railing",
+    "IfcRailing",
+    "railing",
+    "Geländer",
+    "rekkverk",
+    "garde-corps",
+    "Railing",
+    "Reling",
+    "Hekwerk",
+    "Balustrade",
+    "Balustrade",
+    "Railing",
+    "Guardrail"
+  ],
+  "IfcHumidifierType": [
+    "IfcHumidifierType",
+    "humidifier type",
+    "IfcHumidifierType",
+    "humidifier type"
+  ],
+  "IfcDiscreteAccessory": [
+    "IfcDiscreteAccessory",
+    "discrete accessory",
+    "IfcDiscreteAccessory",
+    "discrete accessory"
+  ],
+  "IfcBuildingElementProxyType": [
+    "IfcBuildingElementProxyType",
+    "building element proxy type",
+    "IfcBuildingElementProxyType",
+    "building element proxy type"
+  ],
+  "IfcBuildingElementProxy": [
+    "IfcBuildingElementProxy",
+    "building element proxy",
+    "IfcBuildingElementProxy",
+    "building element proxy"
+  ],
+  "IfcCoilType": [
+    "IfcCoilType",
+    "coil type",
+    "IfcCoilType",
+    "coil type"
+  ],
+  "IfcAirTerminalType": [
+    "IfcAirTerminalType",
+    "air terminal type",
+    "IfcAirTerminalType",
+    "air terminal type"
+  ]
+}

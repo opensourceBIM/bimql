@@ -8,13 +8,14 @@ options {
 	package nl.wietmazairac.bimql;
 	import java.util.HashMap;
 	import java.util.Map;
+	import java.util.Iterator;
 	import nl.wietmazairac.bimql.get.attribute.GetAttributeMain;
 	import nl.wietmazairac.bimql.get.entitytype.GetEntityTypeMain;
 	import nl.wietmazairac.bimql.get.property.GetPropertyMain;
 	import nl.wietmazairac.bimql.set.attribute.SetAttributeMain;
 	import org.bimserver.ifc.IfcModel;
-	import org.bimserver.models.ifc2x3.IfcObject;
-	import org.bimserver.models.ifc2x3.IfcRoot;
+	import org.bimserver.models.ifc2x3tc1.IfcObject;
+	import org.bimserver.models.ifc2x3tc1.IfcRoot;
 	}
 
 @lexer::header {
@@ -24,10 +25,38 @@ options {
 @members {
 	Map<String, List<Object>> hashMapObjectList = new HashMap<String, List<Object>>();
 	Map<String, IfcModel> hashMapIfcModel = new HashMap<String, IfcModel>();
+	Map<String, Class> grammarModules = new HashMap <String, Class>();
+	Map<String, BIMQLGrammarPlugin> pluginKeywords = new HashMap<String, BIMQLGrammarPlugin>();
+	IfcModel ifcModel;
+	public BimQLParser(TokenStream input, List<BIMQLGrammarPlugin> importModules) {
+        super(input);
+           Iterator <BIMQLGrammarPlugin> pluginIter=importModules.iterator();
+           while (pluginIter.hasNext()) {
+           BIMQLGrammarPlugin aPlugin = (BIMQLGrammarPlugin) pluginIter.next();
+          Iterator<String> keyIter = aPlugin.getKeywords().iterator();
+            while(keyIter.hasNext())
+            {
+                pluginKeywords.put(keyIter.next(),aPlugin);
+            }
+      
+       }
+    }
+   
+   public void registerPlugin (BIMQLGrammarPlugin aPlugin)
+   {
+      Iterator<String> keyIter = aPlugin.getKeywords().iterator();
+      while(keyIter.hasNext())
+      {
+          pluginKeywords.put(keyIter.next(),aPlugin);
+      }
+   }
+   
 	}
 
 bimql [IfcModel ifcModel] returns [List<Object> bimqlReturns]
-	:	{	List<IfcRoot> ifcRootList = new ArrayList<IfcRoot>();
+	:	{	
+	    this.ifcModel=ifcModel;
+	    List<IfcRoot> ifcRootList = new ArrayList<IfcRoot>();
 			ifcRootList = ifcModel.getAllWithSubTypes(IfcRoot.class);
 			List<Object> objectList = new ArrayList<Object>();			
 			for (IfcRoot ifcRoot : ifcRootList) {
@@ -61,10 +90,10 @@ cascade returns [String cascadeReturns]
 		(	'.Attribute.' string1 = STRING {
 				List<Object> objectList = new ArrayList<Object>(hashMapObjectList.get($VARIABLE2.text));
 				GetAttributeMain getAttributeMain = new GetAttributeMain(objectList, $string1.text);
-				List<ArrayList> arrayListList = new ArrayList<ArrayList>(getAttributeMain.getResult());
+				List<ArrayList> arrayListList = new ArrayList<ArrayList>((ArrayList)getAttributeMain.getResult());
 				objectList.clear();
 				
-				FlattenList flattenList = new FlattenList(arrayListList);				
+				FlattenList flattenList = new FlattenList((ArrayList)arrayListList);				
 				objectList = flattenList.getResult();
 				
 				hashMapObjectList.put($VARIABLE1.text, objectList);
@@ -73,9 +102,9 @@ cascade returns [String cascadeReturns]
 		|	'.Property.' string2 = STRING {
 				List<Object> objectList = new ArrayList<Object>(hashMapObjectList.get($VARIABLE2.text));
 				GetPropertyMain getPropertyMain = new GetPropertyMain(objectList, $string2.text);
-				List<ArrayList> arrayListList = new ArrayList<ArrayList>(getPropertyMain.getResult());
+				List<ArrayList> arrayListList = new ArrayList<ArrayList>((ArrayList)getPropertyMain.getResult());
 				objectList.clear();
-				FlattenList flattenList = new FlattenList(arrayListList);				
+				FlattenList flattenList = new FlattenList((ArrayList)arrayListList);				
 				objectList = flattenList.getResult();
 				hashMapObjectList.put($VARIABLE1.text, objectList);
 				$cascadeReturns = $VARIABLE1.text;
@@ -127,33 +156,33 @@ relation returns [List<Boolean> relationReturns]
 	:	relationleft
 		(
 			'=' relationright1 = relationright {
-				EqualOperator equalOperator = new EqualOperator($relationleft.relationleftReturns, $relationright1.relationrightReturns);
+				EqualOperator equalOperator = new EqualOperator((ArrayList)$relationleft.relationleftReturns, $relationright1.relationrightReturns);
 				List<Boolean> booleanList = new ArrayList<Boolean>(equalOperator.getResult());
 				$relationReturns = booleanList;
 				}
 			| '/=' relationright2 = relationright {
-				InEqualOperator inEqualOperator = new InEqualOperator($relationleft.relationleftReturns, $relationright2.relationrightReturns);
+				InEqualOperator inEqualOperator = new InEqualOperator((ArrayList)$relationleft.relationleftReturns, $relationright2.relationrightReturns);
 				List<Boolean> booleanList = new ArrayList<Boolean>(inEqualOperator.getResult());
 				$relationReturns = booleanList;
 				}
 			| '<' relationright3 = relationright {
-				LessOperator lessOperator = new LessOperator($relationleft.relationleftReturns, $relationright3.relationrightReturns);
-				List<Boolean> booleanList = new ArrayList<Boolean>(lessOperator.getResult());
+				LessOperator lessOperator = new LessOperator((ArrayList)$relationleft.relationleftReturns, $relationright3.relationrightReturns);
+				List<Boolean> booleanList = new ArrayList<Boolean>((ArrayList)lessOperator.getResult());
 				$relationReturns = booleanList;
 				}
 			| '<=' relationright4 = relationright {
-				LessEqualOperator lessEqualOperator = new LessEqualOperator($relationleft.relationleftReturns, $relationright4.relationrightReturns);
-				List<Boolean> booleanList = new ArrayList<Boolean>(lessEqualOperator.getResult());
+				LessEqualOperator lessEqualOperator = new LessEqualOperator((ArrayList)$relationleft.relationleftReturns, $relationright4.relationrightReturns);
+				List<Boolean> booleanList = new ArrayList<Boolean>((ArrayList)lessEqualOperator.getResult());
 				$relationReturns = booleanList;
 				}
 			| '>=' relationright5 = relationright {
-				GreaterEqualOperator greaterEqualOperator = new GreaterEqualOperator($relationleft.relationleftReturns, $relationright5.relationrightReturns);
-				List<Boolean> booleanList = new ArrayList<Boolean>(greaterEqualOperator.getResult());
+				GreaterEqualOperator greaterEqualOperator = new GreaterEqualOperator((ArrayList)$relationleft.relationleftReturns, $relationright5.relationrightReturns);
+				List<Boolean> booleanList = new ArrayList<Boolean>((ArrayList)greaterEqualOperator.getResult());
 				$relationReturns = booleanList;
 				}
 			| '>' relationright6 = relationright {
-				GreaterOperator greaterOperator = new GreaterOperator($relationleft.relationleftReturns, $relationright6.relationrightReturns);
-				List<Boolean> booleanList = new ArrayList<Boolean>(greaterOperator.getResult());
+				GreaterOperator greaterOperator = new GreaterOperator((ArrayList)$relationleft.relationleftReturns, $relationright6.relationrightReturns);
+				List<Boolean> booleanList = new ArrayList<Boolean>((ArrayList)greaterOperator.getResult());
 				$relationReturns = booleanList;
 				}
 		) 
@@ -163,23 +192,56 @@ relationleft returns [List<ArrayList> relationleftReturns]
 	:	VARIABLE '.EntityType' {
 	    List<Object> objectList = new ArrayList<Object>(hashMapObjectList.get($VARIABLE.text));
       GetEntityTypeMain getEntityTypeMain = new GetEntityTypeMain(objectList);
-      List<ArrayList> arrayListList = new ArrayList<ArrayList>(getEntityTypeMain.getResult());
+      List<ArrayList> arrayListList = new ArrayList<ArrayList>((ArrayList)getEntityTypeMain.getResult());
       $relationleftReturns = arrayListList;
 	}
 	
 	| VARIABLE '.Attribute.' STRING {
 			List<Object> objectList = new ArrayList<Object>(hashMapObjectList.get($VARIABLE.text));
 			GetAttributeMain getAttributeMain = new GetAttributeMain(objectList, $STRING.text);
-			List<ArrayList> arrayListList = new ArrayList<ArrayList>(getAttributeMain.getResult());
+			List<ArrayList> arrayListList = new ArrayList<ArrayList>((ArrayList)getAttributeMain.getResult());
 			$relationleftReturns = arrayListList;
 			}
 		
 	| VARIABLE '.Property.' STRING {
       List<Object> objectList = new ArrayList<Object>(hashMapObjectList.get($VARIABLE.text));
       GetPropertyMain getPropertyMain = new GetPropertyMain(objectList, $STRING.text);
-      List<ArrayList> arrayListList = new ArrayList<ArrayList>(getPropertyMain.getResult());
+      List<ArrayList> arrayListList = new ArrayList<ArrayList>((ArrayList)getPropertyMain.getResult());
       $relationleftReturns = arrayListList;
       }
+  | VARIABLE PLUGIN {
+    System.out.println("searching plugin "+$PLUGIN.text);
+      
+      
+      
+      
+      
+    List<List<Object>> results = new ArrayList<List<Object>>();
+    
+      List<Object> objectList = new ArrayList<Object>(hashMapObjectList.get($VARIABLE.text));
+      String keyword = $PLUGIN.text;
+      keyword = keyword.replaceAll("^:","");
+      if (pluginKeywords.containsKey(keyword)){
+        System.out.println("found plugin for "+$PLUGIN.text);
+        BIMQLGrammarPlugin plugin = pluginKeywords.get(keyword);
+        
+        plugin.init(ifcModel,objectList);
+        results=plugin.getResult();
+        
+      }
+      else {
+        System.out.println("no plugin for "+(PLUGIN11!=null?PLUGIN11.getText():null)+ " found");
+        ArrayList<Object> stringList = new ArrayList<Object>();
+       stringList.add(new String("test"));
+        for (Object object : objectList){
+          results.add(stringList);
+        }
+    
+      }
+      List<ArrayList> arrayListList = new ArrayList<ArrayList>((ArrayList)results);
+      $relationleftReturns = arrayListList;
+    }
+  
   ;
 	
 relationright returns [String relationrightReturns]
@@ -197,6 +259,10 @@ relationright returns [String relationrightReturns]
 VARIABLE
 	:	'$' STRING
 	;
+
+PLUGIN
+  : ':'STRING
+  ;
 	
 INTEGER
 	:	('0'..'9')+
