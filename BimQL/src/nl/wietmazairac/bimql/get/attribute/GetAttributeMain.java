@@ -3828,7 +3828,7 @@ public class GetAttributeMain {
 				objectArrayList = GetAttributeSubIfcZone.getResult();
 				arrayListArrayList.add(objectArrayList);
 			}
-			else if (((IfcRoot) object).eClass().getName().equals("IfcEnginePluginDescriptor")) {
+			else if (((IfcRoot) object).eClass().getName().equals("RenderEnginePluginDescriptor")) {
 				GetAttributeSubIfcEnginePluginDescriptor GetAttributeSubIfcEnginePluginDescriptor = new GetAttributeSubIfcEnginePluginDescriptor(object, string);
 				objectArrayList = GetAttributeSubIfcEnginePluginDescriptor.getResult();
 				arrayListArrayList.add(objectArrayList);
