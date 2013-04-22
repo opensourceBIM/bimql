@@ -35,7 +35,7 @@ public class GetAttributeSubIfcMoistureDiffusivityMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcMoistureDiffusivityMeasure) object).getWrappedValue());
+			resultList.add(((IfcMoistureDiffusivityMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

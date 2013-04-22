@@ -35,7 +35,7 @@ public class GetAttributeSubIfcModulusOfLinearSubgradeReactionMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcModulusOfLinearSubgradeReactionMeasure) object).getWrappedValue());
+			resultList.add(((IfcModulusOfLinearSubgradeReactionMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

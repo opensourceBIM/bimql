@@ -75,7 +75,7 @@ public class GetAttributeSubIfcSoundProperties {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcSoundProperties) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcSoundProperties) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

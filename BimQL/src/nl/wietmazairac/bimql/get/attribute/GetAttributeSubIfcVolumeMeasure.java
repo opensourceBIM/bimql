@@ -35,7 +35,7 @@ public class GetAttributeSubIfcVolumeMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcVolumeMeasure) object).getWrappedValue());
+			resultList.add(((IfcVolumeMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

@@ -120,7 +120,7 @@ public class GetAttributeSubIfcStructuralLoadGroup {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcStructuralLoadGroup) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcStructuralLoadGroup) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

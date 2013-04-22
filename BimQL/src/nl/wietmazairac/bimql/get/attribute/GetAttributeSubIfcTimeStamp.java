@@ -35,7 +35,7 @@ public class GetAttributeSubIfcTimeStamp {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcTimeStamp) object).getWrappedValue());
+			resultList.add(((IfcTimeStamp) object));
 			 //1int
 		}
 		return resultList;

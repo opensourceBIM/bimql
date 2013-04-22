@@ -101,7 +101,7 @@ public class GetAttributeSubIfcCrewResource {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcCrewResource) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcCrewResource) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

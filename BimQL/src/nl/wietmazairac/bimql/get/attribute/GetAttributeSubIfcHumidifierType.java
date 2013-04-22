@@ -104,7 +104,7 @@ public class GetAttributeSubIfcHumidifierType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcHumidifierType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcHumidifierType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

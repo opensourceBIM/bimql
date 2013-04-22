@@ -35,7 +35,7 @@ public class GetAttributeSubIfcIonConcentrationMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcIonConcentrationMeasure) object).getWrappedValue());
+			resultList.add(((IfcIonConcentrationMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

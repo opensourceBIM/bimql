@@ -97,7 +97,7 @@ public class GetAttributeSubIfcProjectOrder {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcProjectOrder) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcProjectOrder) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

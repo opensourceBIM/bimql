@@ -104,7 +104,7 @@ public class GetAttributeSubIfcColumnType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcColumnType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcColumnType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

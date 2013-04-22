@@ -35,7 +35,7 @@ public class GetAttributeSubIfcElectricVoltageMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcElectricVoltageMeasure) object).getWrappedValue());
+			resultList.add(((IfcElectricVoltageMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

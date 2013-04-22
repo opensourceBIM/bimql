@@ -104,7 +104,7 @@ public class GetAttributeSubIfcChillerType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcChillerType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcChillerType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

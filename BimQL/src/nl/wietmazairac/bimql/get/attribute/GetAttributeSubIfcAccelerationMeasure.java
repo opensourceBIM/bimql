@@ -35,7 +35,7 @@ public class GetAttributeSubIfcAccelerationMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcAccelerationMeasure) object).getWrappedValue());
+			resultList.add(((IfcAccelerationMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

@@ -104,7 +104,7 @@ public class GetAttributeSubIfcMotorConnectionType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcMotorConnectionType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcMotorConnectionType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

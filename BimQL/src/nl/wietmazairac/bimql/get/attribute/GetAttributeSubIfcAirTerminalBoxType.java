@@ -104,7 +104,7 @@ public class GetAttributeSubIfcAirTerminalBoxType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcAirTerminalBoxType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcAirTerminalBoxType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

@@ -35,7 +35,7 @@ public class GetAttributeSubIfcKinematicViscosityMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcKinematicViscosityMeasure) object).getWrappedValue());
+			resultList.add(((IfcKinematicViscosityMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

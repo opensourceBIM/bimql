@@ -188,7 +188,7 @@ public class GetAttributeSubIfcEnergyConversionDevice {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcEnergyConversionDevice) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcEnergyConversionDevice) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

@@ -35,7 +35,7 @@ public class GetAttributeSubIfcIntegerCountRateMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcIntegerCountRateMeasure) object).getWrappedValue());
+			resultList.add(((IfcIntegerCountRateMeasure) object));
 			 //1int
 		}
 		return resultList;

@@ -100,7 +100,7 @@ public class GetAttributeSubIfcDistributionElementType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcDistributionElementType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcDistributionElementType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

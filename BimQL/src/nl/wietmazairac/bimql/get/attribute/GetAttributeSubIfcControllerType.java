@@ -104,7 +104,7 @@ public class GetAttributeSubIfcControllerType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcControllerType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcControllerType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

@@ -85,7 +85,7 @@ public class GetAttributeSubIfcControl {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcControl) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcControl) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

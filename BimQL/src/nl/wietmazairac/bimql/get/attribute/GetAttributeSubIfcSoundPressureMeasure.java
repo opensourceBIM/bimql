@@ -35,7 +35,7 @@ public class GetAttributeSubIfcSoundPressureMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcSoundPressureMeasure) object).getWrappedValue());
+			resultList.add(((IfcSoundPressureMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

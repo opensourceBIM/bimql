@@ -35,7 +35,7 @@ public class GetAttributeSubIfcRotationalFrequencyMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcRotationalFrequencyMeasure) object).getWrappedValue());
+			resultList.add(((IfcRotationalFrequencyMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

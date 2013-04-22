@@ -35,7 +35,7 @@ public class GetAttributeSubIfcPowerMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcPowerMeasure) object).getWrappedValue());
+			resultList.add(((IfcPowerMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

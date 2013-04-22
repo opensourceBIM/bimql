@@ -120,7 +120,7 @@ public class GetAttributeSubIfcCostSchedule {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcCostSchedule) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcCostSchedule) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

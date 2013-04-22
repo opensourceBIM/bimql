@@ -140,7 +140,7 @@ public class GetAttributeSubIfcFluidFlowProperties {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcFluidFlowProperties) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcFluidFlowProperties) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

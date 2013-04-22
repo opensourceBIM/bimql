@@ -185,7 +185,7 @@ public class GetAttributeSubIfcProjectionElement {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcProjectionElement) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcProjectionElement) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

@@ -100,7 +100,7 @@ public class GetAttributeSubIfcFlowSegmentType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcFlowSegmentType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcFlowSegmentType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

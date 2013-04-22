@@ -88,7 +88,7 @@ public class GetAttributeSubIfcDoorPanelProperties {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcDoorPanelProperties) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcDoorPanelProperties) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

@@ -35,7 +35,7 @@ public class GetAttributeSubIfcShearModulusMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcShearModulusMeasure) object).getWrappedValue());
+			resultList.add(((IfcShearModulusMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

@@ -104,7 +104,7 @@ public class GetAttributeSubIfcAlarmType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcAlarmType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcAlarmType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

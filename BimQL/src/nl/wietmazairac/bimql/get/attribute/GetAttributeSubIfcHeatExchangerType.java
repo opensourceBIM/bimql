@@ -104,7 +104,7 @@ public class GetAttributeSubIfcHeatExchangerType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcHeatExchangerType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcHeatExchangerType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

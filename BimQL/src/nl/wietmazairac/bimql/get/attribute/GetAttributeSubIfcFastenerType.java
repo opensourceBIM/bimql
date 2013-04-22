@@ -100,7 +100,7 @@ public class GetAttributeSubIfcFastenerType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcFastenerType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcFastenerType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

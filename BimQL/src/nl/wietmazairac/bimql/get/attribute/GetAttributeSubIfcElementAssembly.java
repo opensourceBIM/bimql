@@ -189,7 +189,7 @@ public class GetAttributeSubIfcElementAssembly {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcElementAssembly) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcElementAssembly) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

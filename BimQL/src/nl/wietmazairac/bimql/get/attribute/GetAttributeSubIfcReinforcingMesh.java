@@ -249,7 +249,7 @@ public class GetAttributeSubIfcReinforcingMesh {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcReinforcingMesh) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcReinforcingMesh) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

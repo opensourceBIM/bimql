@@ -185,7 +185,7 @@ public class GetAttributeSubIfcTendonAnchor {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcTendonAnchor) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcTendonAnchor) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

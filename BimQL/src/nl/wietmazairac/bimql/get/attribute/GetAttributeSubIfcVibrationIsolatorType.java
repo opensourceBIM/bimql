@@ -104,7 +104,7 @@ public class GetAttributeSubIfcVibrationIsolatorType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcVibrationIsolatorType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcVibrationIsolatorType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

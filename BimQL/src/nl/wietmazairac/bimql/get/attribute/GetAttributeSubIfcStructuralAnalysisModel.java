@@ -111,7 +111,7 @@ public class GetAttributeSubIfcStructuralAnalysisModel {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcStructuralAnalysisModel) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcStructuralAnalysisModel) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

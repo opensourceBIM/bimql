@@ -35,7 +35,7 @@ public class GetAttributeSubIfcElectricResistanceMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcElectricResistanceMeasure) object).getWrappedValue());
+			resultList.add(((IfcElectricResistanceMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

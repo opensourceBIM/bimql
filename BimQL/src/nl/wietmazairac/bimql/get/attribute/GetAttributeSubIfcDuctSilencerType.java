@@ -104,7 +104,7 @@ public class GetAttributeSubIfcDuctSilencerType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcDuctSilencerType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcDuctSilencerType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

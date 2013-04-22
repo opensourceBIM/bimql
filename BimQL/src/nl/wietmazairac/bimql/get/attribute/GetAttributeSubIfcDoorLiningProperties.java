@@ -144,7 +144,7 @@ public class GetAttributeSubIfcDoorLiningProperties {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcDoorLiningProperties) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcDoorLiningProperties) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

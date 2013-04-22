@@ -100,7 +100,7 @@ public class GetAttributeSubIfcFlowTerminalType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcFlowTerminalType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcFlowTerminalType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

@@ -71,7 +71,7 @@ public class GetAttributeSubIfcRelConnectsWithEccentricity {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRelConnectsWithEccentricity) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRelConnectsWithEccentricity) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

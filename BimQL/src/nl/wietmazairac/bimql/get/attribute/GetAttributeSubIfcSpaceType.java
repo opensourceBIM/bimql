@@ -104,7 +104,7 @@ public class GetAttributeSubIfcSpaceType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcSpaceType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcSpaceType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

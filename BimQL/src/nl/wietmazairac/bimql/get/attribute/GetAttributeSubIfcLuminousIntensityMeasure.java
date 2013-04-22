@@ -35,7 +35,7 @@ public class GetAttributeSubIfcLuminousIntensityMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcLuminousIntensityMeasure) object).getWrappedValue());
+			resultList.add(((IfcLuminousIntensityMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

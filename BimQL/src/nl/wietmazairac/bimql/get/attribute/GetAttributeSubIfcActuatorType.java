@@ -104,7 +104,7 @@ public class GetAttributeSubIfcActuatorType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcActuatorType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcActuatorType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

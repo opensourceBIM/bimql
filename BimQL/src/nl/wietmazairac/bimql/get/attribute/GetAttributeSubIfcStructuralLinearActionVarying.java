@@ -128,7 +128,7 @@ public class GetAttributeSubIfcStructuralLinearActionVarying {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcStructuralLinearActionVarying) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcStructuralLinearActionVarying) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

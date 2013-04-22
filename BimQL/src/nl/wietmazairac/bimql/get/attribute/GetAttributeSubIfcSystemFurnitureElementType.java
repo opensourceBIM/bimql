@@ -100,7 +100,7 @@ public class GetAttributeSubIfcSystemFurnitureElementType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcSystemFurnitureElementType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcSystemFurnitureElementType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

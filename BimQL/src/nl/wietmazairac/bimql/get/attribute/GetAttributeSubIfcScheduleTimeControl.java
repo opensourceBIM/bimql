@@ -193,7 +193,7 @@ public class GetAttributeSubIfcScheduleTimeControl {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcScheduleTimeControl) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcScheduleTimeControl) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

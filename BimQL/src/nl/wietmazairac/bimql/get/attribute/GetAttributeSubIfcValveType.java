@@ -104,7 +104,7 @@ public class GetAttributeSubIfcValveType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcValveType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcValveType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

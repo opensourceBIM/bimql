@@ -57,7 +57,7 @@ public class GetAttributeSubIfcRelOverridesProperties {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRelOverridesProperties) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRelOverridesProperties) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

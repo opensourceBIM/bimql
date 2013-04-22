@@ -35,7 +35,7 @@ public class GetAttributeSubIfcPHMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcPHMeasure) object).getWrappedValue());
+			resultList.add(((IfcPHMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

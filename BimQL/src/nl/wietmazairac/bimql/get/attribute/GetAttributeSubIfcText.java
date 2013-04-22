@@ -35,7 +35,7 @@ public class GetAttributeSubIfcText {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcText) object).getWrappedValue());
+			resultList.add(((IfcText) object));
 			 //1String
 		}
 		return resultList;

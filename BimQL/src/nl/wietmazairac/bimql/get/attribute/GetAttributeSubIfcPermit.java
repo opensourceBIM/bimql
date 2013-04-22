@@ -89,7 +89,7 @@ public class GetAttributeSubIfcPermit {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcPermit) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcPermit) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

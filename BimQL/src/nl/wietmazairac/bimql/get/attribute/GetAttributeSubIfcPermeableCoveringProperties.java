@@ -88,7 +88,7 @@ public class GetAttributeSubIfcPermeableCoveringProperties {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcPermeableCoveringProperties) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcPermeableCoveringProperties) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

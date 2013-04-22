@@ -50,7 +50,7 @@ public class GetAttributeSubIfcRelContainedInSpatialStructure {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRelContainedInSpatialStructure) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRelContainedInSpatialStructure) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

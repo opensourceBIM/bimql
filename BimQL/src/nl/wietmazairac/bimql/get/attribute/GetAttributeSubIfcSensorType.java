@@ -104,7 +104,7 @@ public class GetAttributeSubIfcSensorType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcSensorType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcSensorType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

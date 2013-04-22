@@ -188,7 +188,7 @@ public class GetAttributeSubIfcFlowTreatmentDevice {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcFlowTreatmentDevice) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcFlowTreatmentDevice) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

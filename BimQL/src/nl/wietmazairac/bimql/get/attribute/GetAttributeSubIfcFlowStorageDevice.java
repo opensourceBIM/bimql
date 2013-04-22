@@ -188,7 +188,7 @@ public class GetAttributeSubIfcFlowStorageDevice {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcFlowStorageDevice) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcFlowStorageDevice) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

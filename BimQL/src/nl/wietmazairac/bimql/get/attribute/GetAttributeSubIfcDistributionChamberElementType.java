@@ -104,7 +104,7 @@ public class GetAttributeSubIfcDistributionChamberElementType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcDistributionChamberElementType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcDistributionChamberElementType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

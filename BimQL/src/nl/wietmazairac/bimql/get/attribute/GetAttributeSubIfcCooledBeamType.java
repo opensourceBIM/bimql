@@ -104,7 +104,7 @@ public class GetAttributeSubIfcCooledBeamType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcCooledBeamType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcCooledBeamType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

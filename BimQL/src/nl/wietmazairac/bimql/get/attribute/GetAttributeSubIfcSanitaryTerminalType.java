@@ -104,7 +104,7 @@ public class GetAttributeSubIfcSanitaryTerminalType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcSanitaryTerminalType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcSanitaryTerminalType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

@@ -100,7 +100,7 @@ public class GetAttributeSubIfcAnnotation {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcAnnotation) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcAnnotation) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

@@ -59,7 +59,7 @@ public class GetAttributeSubIfcRelSequence {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRelSequence) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRelSequence) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

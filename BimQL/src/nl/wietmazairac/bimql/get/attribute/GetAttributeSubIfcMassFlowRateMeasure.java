@@ -35,7 +35,7 @@ public class GetAttributeSubIfcMassFlowRateMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcMassFlowRateMeasure) object).getWrappedValue());
+			resultList.add(((IfcMassFlowRateMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

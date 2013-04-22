@@ -111,7 +111,7 @@ public class GetAttributeSubIfcProcedure {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcProcedure) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcProcedure) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

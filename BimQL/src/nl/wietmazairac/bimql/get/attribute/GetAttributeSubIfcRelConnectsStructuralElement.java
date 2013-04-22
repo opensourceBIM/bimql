@@ -47,7 +47,7 @@ public class GetAttributeSubIfcRelConnectsStructuralElement {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRelConnectsStructuralElement) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRelConnectsStructuralElement) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

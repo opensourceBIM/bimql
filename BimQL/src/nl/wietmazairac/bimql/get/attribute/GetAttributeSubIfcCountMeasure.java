@@ -35,7 +35,7 @@ public class GetAttributeSubIfcCountMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcCountMeasure) object).getWrappedValue());
+			resultList.add(((IfcCountMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

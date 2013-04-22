@@ -35,12 +35,8 @@ public class GetAttributeSubIfcGloballyUniqueId {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcGloballyUniqueId) object).getWrappedValue());
+			resultList.add(((IfcGloballyUniqueId) object));
 			 //1String
-		}
-		else if (string.equals("IfcRoot")) {
-			resultList.add(((IfcGloballyUniqueId) object).getIfcRoot());
-			 //1IfcRoot
 		}
 		return resultList;
 	}

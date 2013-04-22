@@ -54,7 +54,7 @@ public class GetAttributeSubIfcRelSchedulesCostItems {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRelSchedulesCostItems) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRelSchedulesCostItems) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

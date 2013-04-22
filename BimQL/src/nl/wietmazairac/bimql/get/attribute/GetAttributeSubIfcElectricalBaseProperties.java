@@ -124,7 +124,7 @@ public class GetAttributeSubIfcElectricalBaseProperties {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcElectricalBaseProperties) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcElectricalBaseProperties) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

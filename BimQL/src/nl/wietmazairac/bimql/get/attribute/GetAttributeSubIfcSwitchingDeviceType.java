@@ -104,7 +104,7 @@ public class GetAttributeSubIfcSwitchingDeviceType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcSwitchingDeviceType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcSwitchingDeviceType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

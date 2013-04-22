@@ -68,7 +68,7 @@ public class GetAttributeSubIfcEnergyProperties {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcEnergyProperties) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcEnergyProperties) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

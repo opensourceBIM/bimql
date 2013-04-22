@@ -35,7 +35,7 @@ public class GetAttributeSubIfcContextDependentMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcContextDependentMeasure) object).getWrappedValue());
+			resultList.add(((IfcContextDependentMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

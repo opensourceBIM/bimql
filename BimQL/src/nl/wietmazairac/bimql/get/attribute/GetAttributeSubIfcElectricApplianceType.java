@@ -104,7 +104,7 @@ public class GetAttributeSubIfcElectricApplianceType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcElectricApplianceType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcElectricApplianceType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

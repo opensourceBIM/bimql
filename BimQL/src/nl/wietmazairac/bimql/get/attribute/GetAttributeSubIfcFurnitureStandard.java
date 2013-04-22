@@ -85,7 +85,7 @@ public class GetAttributeSubIfcFurnitureStandard {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcFurnitureStandard) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcFurnitureStandard) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

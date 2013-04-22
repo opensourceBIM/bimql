@@ -58,7 +58,7 @@ public class GetAttributeSubIfcRelAssignsToProcess {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRelAssignsToProcess) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRelAssignsToProcess) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

@@ -104,7 +104,7 @@ public class GetAttributeSubIfcCompressorType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcCompressorType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcCompressorType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

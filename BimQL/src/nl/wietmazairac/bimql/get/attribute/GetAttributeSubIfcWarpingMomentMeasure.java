@@ -35,7 +35,7 @@ public class GetAttributeSubIfcWarpingMomentMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcWarpingMomentMeasure) object).getWrappedValue());
+			resultList.add(((IfcWarpingMomentMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

@@ -58,7 +58,7 @@ public class GetAttributeSubIfcRelAssociatesProfileProperties {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRelAssociatesProfileProperties) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRelAssociatesProfileProperties) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

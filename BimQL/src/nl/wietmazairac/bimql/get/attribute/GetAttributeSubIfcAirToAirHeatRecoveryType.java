@@ -104,7 +104,7 @@ public class GetAttributeSubIfcAirToAirHeatRecoveryType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcAirToAirHeatRecoveryType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcAirToAirHeatRecoveryType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

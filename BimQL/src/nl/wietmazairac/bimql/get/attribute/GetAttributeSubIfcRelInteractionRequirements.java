@@ -67,7 +67,7 @@ public class GetAttributeSubIfcRelInteractionRequirements {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRelInteractionRequirements) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRelInteractionRequirements) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

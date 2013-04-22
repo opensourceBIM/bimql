@@ -35,7 +35,7 @@ public class GetAttributeSubIfcInteger {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcInteger) object).getWrappedValue());
+			resultList.add(((IfcInteger) object));
 			 //1int
 		}
 		return resultList;

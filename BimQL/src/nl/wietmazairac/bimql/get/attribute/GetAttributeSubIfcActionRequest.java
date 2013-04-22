@@ -89,7 +89,7 @@ public class GetAttributeSubIfcActionRequest {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcActionRequest) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcActionRequest) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

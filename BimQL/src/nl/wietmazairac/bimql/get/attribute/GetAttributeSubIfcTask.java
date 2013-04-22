@@ -119,7 +119,7 @@ public class GetAttributeSubIfcTask {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcTask) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcTask) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

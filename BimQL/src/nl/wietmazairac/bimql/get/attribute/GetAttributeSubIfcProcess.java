@@ -99,7 +99,7 @@ public class GetAttributeSubIfcProcess {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcProcess) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcProcess) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

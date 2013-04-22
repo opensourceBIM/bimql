@@ -54,7 +54,7 @@ public class GetAttributeSubIfcRelAssignsToControl {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRelAssignsToControl) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRelAssignsToControl) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

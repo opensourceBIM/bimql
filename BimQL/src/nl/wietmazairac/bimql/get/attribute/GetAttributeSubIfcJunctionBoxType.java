@@ -104,7 +104,7 @@ public class GetAttributeSubIfcJunctionBoxType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcJunctionBoxType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcJunctionBoxType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

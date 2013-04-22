@@ -100,7 +100,7 @@ public class GetAttributeSubIfcTimeSeriesSchedule {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcTimeSeriesSchedule) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcTimeSeriesSchedule) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

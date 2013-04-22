@@ -35,7 +35,7 @@ public class GetAttributeSubIfcPlaneAngleMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcPlaneAngleMeasure) object).getWrappedValue());
+			resultList.add(((IfcPlaneAngleMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

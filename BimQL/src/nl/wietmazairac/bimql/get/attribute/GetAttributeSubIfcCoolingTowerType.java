@@ -104,7 +104,7 @@ public class GetAttributeSubIfcCoolingTowerType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcCoolingTowerType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcCoolingTowerType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

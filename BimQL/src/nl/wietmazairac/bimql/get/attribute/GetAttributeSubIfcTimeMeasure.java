@@ -35,7 +35,7 @@ public class GetAttributeSubIfcTimeMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcTimeMeasure) object).getWrappedValue());
+			resultList.add(((IfcTimeMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

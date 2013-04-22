@@ -128,7 +128,7 @@ public class GetAttributeSubIfcStructuralPlanarActionVarying {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcStructuralPlanarActionVarying) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcStructuralPlanarActionVarying) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

@@ -104,7 +104,7 @@ public class GetAttributeSubIfcElectricGeneratorType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcElectricGeneratorType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcElectricGeneratorType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

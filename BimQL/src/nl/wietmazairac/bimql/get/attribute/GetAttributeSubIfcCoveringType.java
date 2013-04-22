@@ -104,7 +104,7 @@ public class GetAttributeSubIfcCoveringType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcCoveringType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcCoveringType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

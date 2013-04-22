@@ -201,7 +201,7 @@ public class GetAttributeSubIfcRoundedEdgeFeature {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRoundedEdgeFeature) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRoundedEdgeFeature) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

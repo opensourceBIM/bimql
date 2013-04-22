@@ -152,7 +152,7 @@ public class GetAttributeSubIfcStructuralSurfaceMemberVarying {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcStructuralSurfaceMemberVarying) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcStructuralSurfaceMemberVarying) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

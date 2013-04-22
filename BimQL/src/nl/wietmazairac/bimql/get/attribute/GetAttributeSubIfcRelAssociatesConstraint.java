@@ -54,7 +54,7 @@ public class GetAttributeSubIfcRelAssociatesConstraint {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRelAssociatesConstraint) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRelAssociatesConstraint) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

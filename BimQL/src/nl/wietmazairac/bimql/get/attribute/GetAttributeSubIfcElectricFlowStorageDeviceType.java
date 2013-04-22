@@ -104,7 +104,7 @@ public class GetAttributeSubIfcElectricFlowStorageDeviceType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcElectricFlowStorageDeviceType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcElectricFlowStorageDeviceType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

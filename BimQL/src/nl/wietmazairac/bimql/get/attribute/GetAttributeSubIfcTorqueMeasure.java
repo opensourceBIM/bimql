@@ -35,7 +35,7 @@ public class GetAttributeSubIfcTorqueMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcTorqueMeasure) object).getWrappedValue());
+			resultList.add(((IfcTorqueMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

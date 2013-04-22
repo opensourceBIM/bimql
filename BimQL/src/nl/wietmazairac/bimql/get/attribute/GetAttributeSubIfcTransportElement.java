@@ -201,7 +201,7 @@ public class GetAttributeSubIfcTransportElement {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcTransportElement) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcTransportElement) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

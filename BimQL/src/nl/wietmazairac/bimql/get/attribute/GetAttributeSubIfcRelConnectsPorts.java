@@ -51,7 +51,7 @@ public class GetAttributeSubIfcRelConnectsPorts {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRelConnectsPorts) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRelConnectsPorts) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

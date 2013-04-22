@@ -35,7 +35,7 @@ public class GetAttributeSubIfcCurvatureMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcCurvatureMeasure) object).getWrappedValue());
+			resultList.add(((IfcCurvatureMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

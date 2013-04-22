@@ -35,7 +35,7 @@ public class GetAttributeSubIfcSpecificHeatCapacityMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcSpecificHeatCapacityMeasure) object).getWrappedValue());
+			resultList.add(((IfcSpecificHeatCapacityMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

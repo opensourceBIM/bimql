@@ -188,7 +188,7 @@ public class GetAttributeSubIfcFlowFitting {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcFlowFitting) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcFlowFitting) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

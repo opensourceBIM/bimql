@@ -100,7 +100,7 @@ public class GetAttributeSubIfcFlowFittingType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcFlowFittingType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcFlowFittingType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

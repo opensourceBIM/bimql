@@ -104,7 +104,7 @@ public class GetAttributeSubIfcFanType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcFanType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcFanType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

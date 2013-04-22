@@ -35,7 +35,7 @@ public class GetAttributeSubIfcRotationalStiffnessMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcRotationalStiffnessMeasure) object).getWrappedValue());
+			resultList.add(((IfcRotationalStiffnessMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

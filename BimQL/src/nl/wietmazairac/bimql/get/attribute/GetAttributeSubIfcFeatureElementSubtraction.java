@@ -185,7 +185,7 @@ public class GetAttributeSubIfcFeatureElementSubtraction {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcFeatureElementSubtraction) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcFeatureElementSubtraction) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

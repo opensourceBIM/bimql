@@ -181,7 +181,7 @@ public class GetAttributeSubIfcElectricalElement {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcElectricalElement) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcElectricalElement) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

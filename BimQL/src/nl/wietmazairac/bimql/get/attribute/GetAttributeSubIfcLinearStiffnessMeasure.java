@@ -35,7 +35,7 @@ public class GetAttributeSubIfcLinearStiffnessMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcLinearStiffnessMeasure) object).getWrappedValue());
+			resultList.add(((IfcLinearStiffnessMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

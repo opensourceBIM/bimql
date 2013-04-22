@@ -104,7 +104,7 @@ public class GetAttributeSubIfcTubeBundleType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcTubeBundleType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcTubeBundleType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

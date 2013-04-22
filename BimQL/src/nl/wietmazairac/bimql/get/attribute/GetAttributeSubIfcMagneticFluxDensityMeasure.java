@@ -35,7 +35,7 @@ public class GetAttributeSubIfcMagneticFluxDensityMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcMagneticFluxDensityMeasure) object).getWrappedValue());
+			resultList.add(((IfcMagneticFluxDensityMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

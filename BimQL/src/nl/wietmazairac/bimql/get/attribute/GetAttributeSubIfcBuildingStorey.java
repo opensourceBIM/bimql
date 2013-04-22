@@ -130,7 +130,7 @@ public class GetAttributeSubIfcBuildingStorey {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcBuildingStorey) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcBuildingStorey) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

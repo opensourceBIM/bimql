@@ -104,7 +104,7 @@ public class GetAttributeSubIfcFlowInstrumentType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcFlowInstrumentType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcFlowInstrumentType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

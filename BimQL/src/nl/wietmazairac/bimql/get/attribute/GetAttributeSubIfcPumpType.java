@@ -104,7 +104,7 @@ public class GetAttributeSubIfcPumpType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcPumpType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcPumpType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

@@ -104,7 +104,7 @@ public class GetAttributeSubIfcElectricTimeControlType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcElectricTimeControlType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcElectricTimeControlType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

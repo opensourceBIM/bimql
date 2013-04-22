@@ -104,7 +104,7 @@ public class GetAttributeSubIfcRailingType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRailingType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRailingType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

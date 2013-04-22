@@ -58,7 +58,7 @@ public class GetAttributeSubIfcRelAssignsTasks {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRelAssignsTasks) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRelAssignsTasks) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

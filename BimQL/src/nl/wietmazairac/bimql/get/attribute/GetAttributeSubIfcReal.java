@@ -35,7 +35,7 @@ public class GetAttributeSubIfcReal {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcReal) object).getWrappedValue());
+			resultList.add(((IfcReal) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

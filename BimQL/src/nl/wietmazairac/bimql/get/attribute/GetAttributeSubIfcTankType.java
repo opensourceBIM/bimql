@@ -104,7 +104,7 @@ public class GetAttributeSubIfcTankType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcTankType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcTankType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

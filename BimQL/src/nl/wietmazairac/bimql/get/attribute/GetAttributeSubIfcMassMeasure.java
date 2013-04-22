@@ -35,7 +35,7 @@ public class GetAttributeSubIfcMassMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcMassMeasure) object).getWrappedValue());
+			resultList.add(((IfcMassMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

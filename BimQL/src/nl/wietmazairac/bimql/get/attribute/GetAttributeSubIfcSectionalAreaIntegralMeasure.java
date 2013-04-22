@@ -35,7 +35,7 @@ public class GetAttributeSubIfcSectionalAreaIntegralMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcSectionalAreaIntegralMeasure) object).getWrappedValue());
+			resultList.add(((IfcSectionalAreaIntegralMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

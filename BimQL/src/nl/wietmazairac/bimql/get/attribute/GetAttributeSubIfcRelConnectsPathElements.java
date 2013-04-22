@@ -73,7 +73,7 @@ public class GetAttributeSubIfcRelConnectsPathElements {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRelConnectsPathElements) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRelConnectsPathElements) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

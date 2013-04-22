@@ -104,7 +104,7 @@ public class GetAttributeSubIfcCableCarrierFittingType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcCableCarrierFittingType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcCableCarrierFittingType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

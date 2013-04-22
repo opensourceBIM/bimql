@@ -181,7 +181,7 @@ public class GetAttributeSubIfcDiscreteAccessory {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcDiscreteAccessory) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcDiscreteAccessory) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

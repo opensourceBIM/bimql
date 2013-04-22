@@ -35,7 +35,7 @@ public class GetAttributeSubIfcThermalResistanceMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcThermalResistanceMeasure) object).getWrappedValue());
+			resultList.add(((IfcThermalResistanceMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

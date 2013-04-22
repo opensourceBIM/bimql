@@ -35,7 +35,7 @@ public class GetAttributeSubIfcBoolean {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcBoolean) object).getWrappedValue());
+			resultList.add(((IfcBoolean) object));
 			 //1Tristate
 		}
 		return resultList;

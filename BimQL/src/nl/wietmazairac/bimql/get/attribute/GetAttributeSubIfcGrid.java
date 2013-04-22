@@ -121,7 +121,7 @@ public class GetAttributeSubIfcGrid {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcGrid) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcGrid) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

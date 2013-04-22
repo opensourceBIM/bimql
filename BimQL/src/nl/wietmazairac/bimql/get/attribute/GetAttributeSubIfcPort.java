@@ -111,7 +111,7 @@ public class GetAttributeSubIfcPort {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcPort) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcPort) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

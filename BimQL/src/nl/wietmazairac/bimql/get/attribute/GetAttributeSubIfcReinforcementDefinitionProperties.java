@@ -71,7 +71,7 @@ public class GetAttributeSubIfcReinforcementDefinitionProperties {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcReinforcementDefinitionProperties) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcReinforcementDefinitionProperties) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

@@ -104,7 +104,7 @@ public class GetAttributeSubIfcLightFixtureType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcLightFixtureType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcLightFixtureType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

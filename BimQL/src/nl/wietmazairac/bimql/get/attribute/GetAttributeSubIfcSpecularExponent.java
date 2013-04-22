@@ -35,7 +35,7 @@ public class GetAttributeSubIfcSpecularExponent {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcSpecularExponent) object).getWrappedValue());
+			resultList.add(((IfcSpecularExponent) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

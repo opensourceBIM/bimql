@@ -100,7 +100,7 @@ public class GetAttributeSubIfcStructuralItem {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcStructuralItem) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcStructuralItem) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

@@ -104,7 +104,7 @@ public class GetAttributeSubIfcSpaceHeaterType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcSpaceHeaterType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcSpaceHeaterType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

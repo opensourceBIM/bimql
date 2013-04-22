@@ -112,7 +112,7 @@ public class GetAttributeSubIfcStructuralReaction {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcStructuralReaction) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcStructuralReaction) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

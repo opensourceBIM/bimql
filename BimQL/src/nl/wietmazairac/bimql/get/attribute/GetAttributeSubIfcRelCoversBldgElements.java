@@ -50,7 +50,7 @@ public class GetAttributeSubIfcRelCoversBldgElements {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRelCoversBldgElements) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRelCoversBldgElements) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

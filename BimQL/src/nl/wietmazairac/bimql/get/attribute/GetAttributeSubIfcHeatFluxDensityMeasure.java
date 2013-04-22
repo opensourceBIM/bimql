@@ -35,7 +35,7 @@ public class GetAttributeSubIfcHeatFluxDensityMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcHeatFluxDensityMeasure) object).getWrappedValue());
+			resultList.add(((IfcHeatFluxDensityMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

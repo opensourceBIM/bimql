@@ -134,7 +134,7 @@ public class GetAttributeSubIfcMove {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcMove) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcMove) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

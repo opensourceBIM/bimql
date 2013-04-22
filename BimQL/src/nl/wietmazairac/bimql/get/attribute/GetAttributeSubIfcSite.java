@@ -152,7 +152,7 @@ public class GetAttributeSubIfcSite {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcSite) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcSite) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

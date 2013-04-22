@@ -100,7 +100,7 @@ public class GetAttributeSubIfcSpatialStructureElementType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcSpatialStructureElementType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcSpatialStructureElementType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

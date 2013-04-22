@@ -35,7 +35,7 @@ public class GetAttributeSubIfcThermodynamicTemperatureMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcThermodynamicTemperatureMeasure) object).getWrappedValue());
+			resultList.add(((IfcThermodynamicTemperatureMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

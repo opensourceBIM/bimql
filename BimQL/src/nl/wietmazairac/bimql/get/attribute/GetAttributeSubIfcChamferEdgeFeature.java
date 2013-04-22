@@ -209,7 +209,7 @@ public class GetAttributeSubIfcChamferEdgeFeature {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcChamferEdgeFeature) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcChamferEdgeFeature) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

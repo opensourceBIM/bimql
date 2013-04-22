@@ -104,7 +104,7 @@ public class GetAttributeSubIfcDamperType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcDamperType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcDamperType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

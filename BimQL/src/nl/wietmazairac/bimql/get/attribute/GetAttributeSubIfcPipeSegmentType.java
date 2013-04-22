@@ -104,7 +104,7 @@ public class GetAttributeSubIfcPipeSegmentType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcPipeSegmentType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcPipeSegmentType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

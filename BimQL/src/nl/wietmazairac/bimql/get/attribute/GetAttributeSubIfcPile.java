@@ -189,7 +189,7 @@ public class GetAttributeSubIfcPile {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcPile) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcPile) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

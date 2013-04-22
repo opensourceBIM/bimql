@@ -85,7 +85,7 @@ public class GetAttributeSubIfcEquipmentStandard {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcEquipmentStandard) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcEquipmentStandard) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

@@ -181,7 +181,7 @@ public class GetAttributeSubIfcBeam {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcBeam) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcBeam) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

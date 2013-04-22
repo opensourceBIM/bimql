@@ -35,7 +35,7 @@ public class GetAttributeSubIfcAreaMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcAreaMeasure) object).getWrappedValue());
+			resultList.add(((IfcAreaMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

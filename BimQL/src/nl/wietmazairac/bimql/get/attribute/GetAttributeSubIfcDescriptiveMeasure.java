@@ -35,7 +35,7 @@ public class GetAttributeSubIfcDescriptiveMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcDescriptiveMeasure) object).getWrappedValue());
+			resultList.add(((IfcDescriptiveMeasure) object));
 			 //1String
 		}
 		return resultList;

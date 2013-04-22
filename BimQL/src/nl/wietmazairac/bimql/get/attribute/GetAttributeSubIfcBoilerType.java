@@ -104,7 +104,7 @@ public class GetAttributeSubIfcBoilerType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcBoilerType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcBoilerType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

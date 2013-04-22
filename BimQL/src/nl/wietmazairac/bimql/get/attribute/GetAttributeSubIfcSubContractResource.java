@@ -109,7 +109,7 @@ public class GetAttributeSubIfcSubContractResource {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcSubContractResource) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcSubContractResource) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

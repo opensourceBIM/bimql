@@ -35,7 +35,7 @@ public class GetAttributeSubIfcVolumetricFlowRateMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcVolumetricFlowRateMeasure) object).getWrappedValue());
+			resultList.add(((IfcVolumetricFlowRateMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

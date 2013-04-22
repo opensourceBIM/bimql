@@ -104,7 +104,7 @@ public class GetAttributeSubIfcCableCarrierSegmentType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcCableCarrierSegmentType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcCableCarrierSegmentType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

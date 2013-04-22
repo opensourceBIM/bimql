@@ -104,7 +104,7 @@ public class GetAttributeSubIfcCondenserType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcCondenserType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcCondenserType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

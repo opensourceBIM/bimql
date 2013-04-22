@@ -35,7 +35,7 @@ public class GetAttributeSubIfcIsothermalMoistureCapacityMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcIsothermalMoistureCapacityMeasure) object).getWrappedValue());
+			resultList.add(((IfcIsothermalMoistureCapacityMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

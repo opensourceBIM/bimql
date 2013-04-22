@@ -193,7 +193,7 @@ public class GetAttributeSubIfcEdgeFeature {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcEdgeFeature) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcEdgeFeature) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

@@ -118,7 +118,7 @@ public class GetAttributeSubIfcStructuralCurveMemberVarying {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcStructuralCurveMemberVarying) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcStructuralCurveMemberVarying) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

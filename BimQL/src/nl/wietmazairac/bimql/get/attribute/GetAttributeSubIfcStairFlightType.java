@@ -104,7 +104,7 @@ public class GetAttributeSubIfcStairFlightType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcStairFlightType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcStairFlightType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

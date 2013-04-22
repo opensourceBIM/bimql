@@ -196,7 +196,7 @@ public class GetAttributeSubIfcElectricDistributionPoint {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcElectricDistributionPoint) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcElectricDistributionPoint) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

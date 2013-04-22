@@ -181,7 +181,7 @@ public class GetAttributeSubIfcRampFlight {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRampFlight) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRampFlight) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

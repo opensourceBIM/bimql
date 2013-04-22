@@ -35,7 +35,7 @@ public class GetAttributeSubIfcModulusOfElasticityMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcModulusOfElasticityMeasure) object).getWrappedValue());
+			resultList.add(((IfcModulusOfElasticityMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

@@ -35,7 +35,7 @@ public class GetAttributeSubIfcParameterValue {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcParameterValue) object).getWrappedValue());
+			resultList.add(((IfcParameterValue) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

@@ -35,7 +35,7 @@ public class GetAttributeSubIfcDynamicViscosityMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcDynamicViscosityMeasure) object).getWrappedValue());
+			resultList.add(((IfcDynamicViscosityMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

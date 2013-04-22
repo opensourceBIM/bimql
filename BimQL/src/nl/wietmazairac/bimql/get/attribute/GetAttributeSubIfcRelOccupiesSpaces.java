@@ -58,7 +58,7 @@ public class GetAttributeSubIfcRelOccupiesSpaces {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRelOccupiesSpaces) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRelOccupiesSpaces) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

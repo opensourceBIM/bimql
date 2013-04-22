@@ -35,7 +35,7 @@ public class GetAttributeSubIfcLinearMomentMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcLinearMomentMeasure) object).getWrappedValue());
+			resultList.add(((IfcLinearMomentMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

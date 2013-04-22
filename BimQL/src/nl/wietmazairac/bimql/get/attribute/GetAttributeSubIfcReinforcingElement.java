@@ -185,7 +185,7 @@ public class GetAttributeSubIfcReinforcingElement {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcReinforcingElement) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcReinforcingElement) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

@@ -54,7 +54,7 @@ public class GetAttributeSubIfcRelAssignsToProjectOrder {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRelAssignsToProjectOrder) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRelAssignsToProjectOrder) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

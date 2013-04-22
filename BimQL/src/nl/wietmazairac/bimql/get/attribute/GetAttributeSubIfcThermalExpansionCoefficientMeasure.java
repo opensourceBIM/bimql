@@ -35,7 +35,7 @@ public class GetAttributeSubIfcThermalExpansionCoefficientMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcThermalExpansionCoefficientMeasure) object).getWrappedValue());
+			resultList.add(((IfcThermalExpansionCoefficientMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

@@ -35,7 +35,7 @@ public class GetAttributeSubIfcLuminousFluxMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcLuminousFluxMeasure) object).getWrappedValue());
+			resultList.add(((IfcLuminousFluxMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

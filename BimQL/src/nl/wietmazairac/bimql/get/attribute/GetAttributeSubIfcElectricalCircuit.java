@@ -89,7 +89,7 @@ public class GetAttributeSubIfcElectricalCircuit {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcElectricalCircuit) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcElectricalCircuit) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

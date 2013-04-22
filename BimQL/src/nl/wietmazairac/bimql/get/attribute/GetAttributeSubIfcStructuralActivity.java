@@ -105,7 +105,7 @@ public class GetAttributeSubIfcStructuralActivity {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcStructuralActivity) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcStructuralActivity) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

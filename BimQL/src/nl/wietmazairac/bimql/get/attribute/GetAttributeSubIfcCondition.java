@@ -82,7 +82,7 @@ public class GetAttributeSubIfcCondition {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcCondition) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcCondition) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

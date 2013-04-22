@@ -111,7 +111,7 @@ public class GetAttributeSubIfcStructuralSurfaceConnection {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcStructuralSurfaceConnection) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcStructuralSurfaceConnection) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

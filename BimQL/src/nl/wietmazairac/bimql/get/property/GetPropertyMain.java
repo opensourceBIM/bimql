@@ -155,7 +155,7 @@ public class GetPropertyMain {
 								if (ifcProperty.getName().equals(string)) {
 									if (ifcProperty.getClass().getSimpleName().equals("IfcPropertySingleValueImpl")) {
 										if (((IfcPropertySingleValue) ifcProperty).getNominalValue().getClass().getSimpleName().equals("Ifc2x3tc1Package")) {
-											objectArrayList.add(((Ifc2x3tc1Package) ((IfcPropertySingleValue) ifcProperty).getNominalValue()).getWrappedValue());
+											objectArrayList.add(((Ifc2x3tc1Package) ((IfcPropertySingleValue) ifcProperty).getNominalValue()));
 										}
 										else if (((IfcPropertySingleValue) ifcProperty).getNominalValue().getClass().getSimpleName().equals("IfcAbsorbedDoseMeasure")) {
 											objectArrayList.add(((IfcAbsorbedDoseMeasure) ((IfcPropertySingleValue) ifcProperty).getNominalValue()).getWrappedValue());
@@ -440,7 +440,7 @@ public class GetPropertyMain {
 											objectArrayList.add(((IfcWarpingMomentMeasure) ((IfcPropertySingleValue) ifcProperty).getNominalValue()).getWrappedValue());
 										}
 										else if (((IfcPropertySingleValue) ifcProperty).getNominalValue().getClass().getSimpleName().equals("Ifc2x3tc1PackageImpl")) {
-											objectArrayList.add(((Ifc2x3tc1PackageImpl) ((IfcPropertySingleValue) ifcProperty).getNominalValue()).getWrappedValue());
+											objectArrayList.add(((Ifc2x3tc1PackageImpl) ((IfcPropertySingleValue) ifcProperty).getNominalValue()));
 										}
 										else if (((IfcPropertySingleValue) ifcProperty).getNominalValue().getClass().getSimpleName().equals("IfcAbsorbedDoseMeasureImpl")) {
 											objectArrayList.add(((IfcAbsorbedDoseMeasureImpl) ((IfcPropertySingleValue) ifcProperty).getNominalValue()).getWrappedValue());
@@ -732,7 +732,7 @@ public class GetPropertyMain {
 										List<IfcProperty> ifcComplexPropertyList = new ArrayList<IfcProperty>(((IfcComplexProperty) ifcProperty).getHasProperties());
 										for (IfcProperty ifcComplexProperty : ifcComplexPropertyList) {
 											if (((IfcPropertySingleValue) ifcComplexProperty).getNominalValue().getClass().getSimpleName().equals("Ifc2x3tc1Package")) {
-												objectArrayList.add(((Ifc2x3tc1Package) ((IfcPropertySingleValue) ifcComplexProperty).getNominalValue()).getWrappedValue());
+												objectArrayList.add(((Ifc2x3tc1Package) ((IfcPropertySingleValue) ifcComplexProperty).getNominalValue()));
 											}
 											else if (((IfcPropertySingleValue) ifcComplexProperty).getNominalValue().getClass().getSimpleName().equals("IfcAbsorbedDoseMeasure")) {
 												objectArrayList.add(((IfcAbsorbedDoseMeasure) ((IfcPropertySingleValue) ifcComplexProperty).getNominalValue()).getWrappedValue());
@@ -1017,7 +1017,7 @@ public class GetPropertyMain {
 												objectArrayList.add(((IfcWarpingMomentMeasure) ((IfcPropertySingleValue) ifcComplexProperty).getNominalValue()).getWrappedValue());
 											}
 											else if (((IfcPropertySingleValue) ifcComplexProperty).getNominalValue().getClass().getSimpleName().equals("Ifc2x3tc1PackageImpl")) {
-												objectArrayList.add(((Ifc2x3tc1PackageImpl) ((IfcPropertySingleValue) ifcComplexProperty).getNominalValue()).getWrappedValue());
+												objectArrayList.add(((Ifc2x3tc1PackageImpl) ((IfcPropertySingleValue) ifcComplexProperty).getNominalValue()));
 											}
 											else if (((IfcPropertySingleValue) ifcComplexProperty).getNominalValue().getClass().getSimpleName().equals("IfcAbsorbedDoseMeasureImpl")) {
 												objectArrayList.add(((IfcAbsorbedDoseMeasureImpl) ((IfcPropertySingleValue) ifcComplexProperty).getNominalValue()).getWrappedValue());

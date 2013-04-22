@@ -123,7 +123,7 @@ public class GetAttributeSubIfcOrderAction {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcOrderAction) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcOrderAction) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

@@ -50,7 +50,7 @@ public class GetAttributeSubIfcRelAssociatesAppliedValue {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRelAssociatesAppliedValue) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRelAssociatesAppliedValue) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

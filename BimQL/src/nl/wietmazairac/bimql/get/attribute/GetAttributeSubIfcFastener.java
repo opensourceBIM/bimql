@@ -181,7 +181,7 @@ public class GetAttributeSubIfcFastener {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcFastener) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcFastener) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

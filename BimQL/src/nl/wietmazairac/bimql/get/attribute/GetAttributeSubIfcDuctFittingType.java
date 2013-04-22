@@ -104,7 +104,7 @@ public class GetAttributeSubIfcDuctFittingType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcDuctFittingType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcDuctFittingType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {

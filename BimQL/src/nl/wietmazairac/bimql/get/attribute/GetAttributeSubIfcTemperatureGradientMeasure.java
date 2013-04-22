@@ -35,7 +35,7 @@ public class GetAttributeSubIfcTemperatureGradientMeasure {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("WrappedValue")) {
-			resultList.add(((IfcTemperatureGradientMeasure) object).getWrappedValue());
+			resultList.add(((IfcTemperatureGradientMeasure) object));
 			 //1double
 		}
 		else if (string.equals("WrappedValueAsString")) {

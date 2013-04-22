@@ -50,7 +50,7 @@ public class GetAttributeSubIfcRelDefinesByType {
 			 //3IfcOwnerHistory
 		}
 		else if (string.equals("GlobalId")) {
-			resultList.add(((IfcRelDefinesByType) object).getGlobalId().getWrappedValue());
+			resultList.add(((IfcRelDefinesByType) object).getGlobalId());
 			 //3IfcGloballyUniqueId
 		}
 		else if (string.equals("GlobalIdObject")) {
