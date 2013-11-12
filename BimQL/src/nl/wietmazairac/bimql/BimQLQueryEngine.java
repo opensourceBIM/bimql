@@ -10,7 +10,6 @@ import org.antlr.runtime.TokenStream;
 import org.bimserver.emf.IdEObject;
 import org.bimserver.emf.IfcModelInterface;
 import org.bimserver.emf.IfcModelInterfaceException;
-import org.bimserver.ifc.IfcModel;
 import org.bimserver.plugins.ModelHelper;
 import org.bimserver.plugins.Reporter;
 import org.bimserver.plugins.queryengine.QueryEngine;
@@ -27,7 +26,7 @@ public class BimQLQueryEngine implements QueryEngine {
 				String hdr = getErrorHeader(e);
 				String msg = getErrorMessage(e, getTokenNames());
 				emitErrorMessage(hdr + " " + msg);
-				reporter.error(hdr + " " + msg);
+				reporter.error(new Exception(hdr + " " + msg));
 			}
 		};
 		TokenStream tokenStream = new CommonTokenStream(lexer);
@@ -37,16 +36,16 @@ public class BimQLQueryEngine implements QueryEngine {
 				String hdr = getErrorHeader(e);
 				String msg = getErrorMessage(e, tokenNames);
 				emitErrorMessage(hdr + " " + msg);
-				reporter.error(hdr + " " + msg);
+				reporter.error(new Exception(hdr + " " + msg));
 			}
 		};
 		try {
-			IfcModelInterface resultModel = new IfcModel();
+			IfcModelInterface resultModel = modelHelper.getTargetModel();
 			List<Object> result = parser.bimql(model);
 			if (result != null) {
 				for (Object object : result) {
 					if (object instanceof IdEObject) {
-						modelHelper.copy((IdEObject)object, resultModel);
+						modelHelper.copy((IdEObject)object);
 					}
 				}
 			}
