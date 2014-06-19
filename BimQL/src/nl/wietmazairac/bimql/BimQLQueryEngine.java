@@ -14,7 +14,6 @@ import org.bimserver.ifc.IfcModel;
 import org.bimserver.plugins.ModelHelper;
 import org.bimserver.plugins.Reporter;
 import org.bimserver.plugins.objectidms.AbstractObjectIDM;
-import org.bimserver.plugins.objectidms.ObjectIDM;
 import org.bimserver.plugins.queryengine.QueryEngine;
 import org.bimserver.plugins.queryengine.QueryEngineException;
 import org.eclipse.emf.ecore.EAttribute;
@@ -104,7 +103,7 @@ public class BimQLQueryEngine implements QueryEngine {
 						{
 							if (feature.getName().equalsIgnoreCase("HasAssociations"))
 							{
-								Object eGet = ((IdEObject)object).eGet(feature);
+//								Object eGet = ((IdEObject)object).eGet(feature);
 //								System.out.println(eGet.toString());
 							}
 						}
