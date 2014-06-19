@@ -17,8 +17,11 @@ import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.TokenStream;
 import org.bimserver.emf.IfcModelInterface;
+import org.bimserver.emf.Schema;
 import org.bimserver.ifc.IfcModel;
+import org.bimserver.ifc.step.deserializer.Ifc2x3tc1StepDeserializer;
 import org.bimserver.ifc.step.deserializer.IfcStepDeserializer;
+import org.bimserver.ifc.step.serializer.Ifc2x3tc1StepSerializer;
 import org.bimserver.ifc.step.serializer.IfcStepSerializer;
 import org.bimserver.plugins.PluginConfiguration;
 import org.bimserver.plugins.PluginException;
@@ -34,7 +37,7 @@ public class BimQLTest {
 
 		// L O A D M O D E L
 
-		IfcModelInterface ifcModel = new IfcModel();
+		IfcModelInterface ifcModel = new IfcModel(null); // TODO find right PackageMetaData thing
 		ifcModel = importModel("Clinic_A_20110906.ifc");
 
 		// E X A M P L E S S E L E C T
@@ -239,10 +242,9 @@ public class BimQLTest {
 	}
 
 	public static IfcModelInterface importModel(String ifcFile) {
-		IfcStepDeserializer reader = new IfcStepDeserializer();
-
-		IfcModelInterface ifcModel = new IfcModel();
-		reader.init(new SchemaLoader("Ifc2x3_TC1.exp").getSchema());
+		IfcStepDeserializer reader = new Ifc2x3tc1StepDeserializer(Schema.IFC2X3TC1);
+		IfcModelInterface ifcModel = new IfcModel(null); // TODO find right PackageMetaData thing
+		reader.init(ifcModel.getPackageMetaData());
 		try {
 			ifcModel = reader.read(new File(ifcFile));
 		} catch (DeserializeException e) {
@@ -252,7 +254,7 @@ public class BimQLTest {
 	}
 
 	public static void exportModel(IfcModel ifcModel, String ifcFile) {
-		IfcStepSerializer writer = new IfcStepSerializer(new PluginConfiguration());
+		IfcStepSerializer writer = new Ifc2x3tc1StepSerializer(new PluginConfiguration());
 		ProjectInfo projectInfo = new ProjectInfo();
 		PluginManager pluginManager = new PluginManager();
 
@@ -269,7 +271,7 @@ public class BimQLTest {
 		}
 
 		try {
-			writer.init(ifcModel, projectInfo, pluginManager, null, false);
+			writer.init(ifcModel, projectInfo, pluginManager, null, null, false); // TODO find right PackageMetaData thing
 			writer.writeToFile(new File(ifcFile));
 		} catch (SerializerException e) {
 			e.printStackTrace();

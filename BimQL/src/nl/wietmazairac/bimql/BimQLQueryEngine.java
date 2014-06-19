@@ -48,8 +48,8 @@ public class BimQLQueryEngine implements QueryEngine {
 		try {
 //			IfcModelInterface resultModel = modelHelper.getTargetModel();
 //			resultModel.clear();
-			IfcModelInterface resultModel = new IfcModel();
-			AbstractObjectIDM idm = new AbstractObjectIDM(null){
+			IfcModelInterface resultModel = new IfcModel(model.getPackageMetaData());
+			AbstractObjectIDM idm = new AbstractObjectIDM(null, model.getPackageMetaData()){
 
 				@Override
 				public boolean shouldFollowReference(EClass originalClass,
