@@ -10,10 +10,9 @@ import org.antlr.runtime.TokenStream;
 import org.bimserver.emf.IdEObject;
 import org.bimserver.emf.IfcModelInterface;
 import org.bimserver.emf.IfcModelInterfaceException;
-import org.bimserver.ifc.IfcModel;
 import org.bimserver.plugins.ModelHelper;
 import org.bimserver.plugins.Reporter;
-import org.bimserver.plugins.objectidms.AbstractObjectIDM;
+import org.bimserver.plugins.objectidms.ObjectIDM;
 import org.bimserver.plugins.queryengine.QueryEngine;
 import org.bimserver.plugins.queryengine.QueryEngineException;
 import org.eclipse.emf.ecore.EAttribute;
@@ -24,6 +23,8 @@ public class BimQLQueryEngine implements QueryEngine {
 
 	@Override
 	public IfcModelInterface query(IfcModelInterface model, String code, final Reporter reporter, ModelHelper modelHelper) throws QueryEngineException {
+		model.fixInverseMismatches();
+		
 		CharStream charStream = new ANTLRStringStream(code);
 		BimQLLexer lexer = new BimQLLexer(charStream) {
 			@Override
@@ -44,16 +45,14 @@ public class BimQLQueryEngine implements QueryEngine {
 				reporter.error(new Exception(hdr + " " + msg));
 			}
 		};
+		
 		try {
-//			IfcModelInterface resultModel = modelHelper.getTargetModel();
-//			resultModel.clear();
-			IfcModelInterface resultModel = new IfcModel(model.getPackageMetaData());
-			AbstractObjectIDM idm = new AbstractObjectIDM(null, model.getPackageMetaData()){
+			IfcModelInterface resultModel = modelHelper.getTargetModel();
+			ObjectIDM idm = new ObjectIDM(){
 
 				@Override
 				public boolean shouldFollowReference(EClass originalClass,
 						EClass eClass, EStructuralFeature eStructuralFeature) {
-//					System.out.println(eStructuralFeature.getName());
 					if (eStructuralFeature instanceof EAttribute)
 						return true;
 					if (eStructuralFeature.getName().equalsIgnoreCase("HasAssignments"))
@@ -78,40 +77,21 @@ public class BimQLQueryEngine implements QueryEngine {
 				@Override
 				public boolean shouldIncludeClass(EClass originalClass,
 						EClass eClass) {
-					// TODO Auto-generated method stub
 					return true;
 				}
-				
 			};
 			
-			ModelHelper mh = new ModelHelper(idm,resultModel);
-			mh.setKeepOriginalOids(false);
+			modelHelper.setObjectIDM(idm);
 			
-			mh.setTargetModel(resultModel);
-			
-//			for (IdEObject obj : resultModel.getObjects().values())
-//			{
-//				resultModel.remove(obj);
-//			}
 			List<Object> result = parser.bimql(model);
 			if (result != null) {
 				for (Object object : result) {
 					if (object instanceof IdEObject) {
-//						resultModel.add(1,((IdEObject)object));
-						mh.copy((IdEObject)object);
-						for (EStructuralFeature feature : ((IdEObject)object).eClass().getEAllStructuralFeatures())
-						{
-							if (feature.getName().equalsIgnoreCase("HasAssociations"))
-							{
-//								Object eGet = ((IdEObject)object).eGet(feature);
-//								System.out.println(eGet.toString());
-							}
-						}
+						modelHelper.copy((IdEObject)object);
 					}
 				}
 			}
 			return resultModel;
-//			return mh.getTargetModel();
 		} catch (RecognitionException e) {
 			throw new QueryEngineException(e);
 		} catch (IfcModelInterfaceException e) {
