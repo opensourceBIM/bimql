@@ -3,5 +3,6 @@
 	<PluginImplementation>
 		<interfaceClass>org.bimserver.plugins.queryengine.QueryEnginePlugin</interfaceClass>
 		<implementationClass>nl.wietmazairac.bimql.BimQLQueryEnginePlugin</implementationClass>
+		<enabled>true</enabled>
 	</PluginImplementation>
 </PluginDescriptor>
