@@ -16,6 +16,7 @@ import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.TokenStream;
 import org.bimserver.emf.IfcModelInterface;
 import org.bimserver.emf.Schema;
+import org.bimserver.ifc.BasicIfcModel;
 import org.bimserver.ifc.IfcModel;
 import org.bimserver.ifc.step.deserializer.Ifc2x3tc1StepDeserializer;
 import org.bimserver.ifc.step.deserializer.IfcStepDeserializer;
@@ -35,7 +36,7 @@ public class BimQLTest {
 
 		// L O A D M O D E L
 
-		IfcModelInterface ifcModel = new IfcModel(null, null); // TODO find right PackageMetaData thing
+		IfcModelInterface ifcModel = new BasicIfcModel(null, null); // TODO find right PackageMetaData thing
 		ifcModel = importModel("Clinic_A_20110906.ifc");
 
 		// E X A M P L E S S E L E C T
@@ -241,7 +242,7 @@ public class BimQLTest {
 
 	public static IfcModelInterface importModel(String ifcFile) {
 		IfcStepDeserializer reader = new Ifc2x3tc1StepDeserializer(Schema.IFC2X3TC1);
-		IfcModelInterface ifcModel = new IfcModel(null, null); // TODO find right PackageMetaData thing
+		IfcModelInterface ifcModel = new BasicIfcModel(null, null); // TODO find right PackageMetaData thing
 		reader.init(ifcModel.getPackageMetaData());
 		try {
 			ifcModel = reader.read(new File(ifcFile));
