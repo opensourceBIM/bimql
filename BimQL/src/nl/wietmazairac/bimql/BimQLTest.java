@@ -2,6 +2,8 @@ package nl.wietmazairac.bimql;
 
 import java.io.File;
 import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
@@ -257,13 +259,11 @@ public class BimQLTest {
 		ProjectInfo projectInfo = new ProjectInfo();
 		PluginManager pluginManager = new PluginManager();
 
-		File projectRoot = new File(
-				"C:\\Users\\Wiet\\Dropbox\\workspace\\buildingSMARTLibrary");
+		Path projectRoot = Paths.get("C:\\Users\\Wiet\\Dropbox\\workspace\\buildingSMARTLibrary");
 
 		try {
 			pluginManager.loadPluginsFromEclipseProject(projectRoot);
-			List<SchemaPlugin> schemaPluginList = new ArrayList<SchemaPlugin>(
-					pluginManager.getAllSchemaPlugins(true));
+			List<SchemaPlugin> schemaPluginList = new ArrayList<SchemaPlugin>(pluginManager.getAllSchemaPlugins(true));
 			System.out.println(schemaPluginList.size());
 		} catch (PluginException e) {
 			e.printStackTrace();
@@ -271,7 +271,7 @@ public class BimQLTest {
 
 		try {
 			writer.init(ifcModel, projectInfo, pluginManager, null, null, false); // TODO find right PackageMetaData thing
-			writer.writeToFile(new File(ifcFile), null);
+			writer.writeToFile(Paths.get(ifcFile), null);
 		} catch (SerializerException e) {
 			e.printStackTrace();
 		}
