@@ -257,7 +257,7 @@ public class BimQLTest {
 	public static void exportModel(IfcModel ifcModel, String ifcFile) {
 		IfcStepSerializer writer = new Ifc2x3tc1StepSerializer(new PluginConfiguration());
 		ProjectInfo projectInfo = new ProjectInfo();
-		PluginManager pluginManager = new PluginManager();
+		PluginManager pluginManager = null;//new PluginManager(); TODO
 
 		Path projectRoot = Paths.get("C:\\Users\\Wiet\\Dropbox\\workspace\\buildingSMARTLibrary");
 
