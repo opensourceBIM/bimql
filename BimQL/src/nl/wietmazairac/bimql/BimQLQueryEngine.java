@@ -61,7 +61,14 @@ public class BimQLQueryEngine implements QueryEngine {
 						EClass eClass, EStructuralFeature eStructuralFeature) {
 					EntityDefinition entityBN = model.getPackageMetaData().getSchemaDefinition().getEntityBN(eClass.getName());
 					if (entityBN == null) {
-						LOGGER.error(eClass.getName() + " not found");
+						if (eClass.getName().equals("GeometryInfo")) {
+							// ignore
+							return true;
+						} else if (eClass.getName().equals("GeometryData") || eClass.getName().equals("Vector3f")) {
+							return true;
+						} else {
+							LOGGER.error(eClass.getName() + " not found");
+						}
 						return false;
 					} else {
 						Attribute attributeBN = entityBN.getAttributeBNWithSuper(eStructuralFeature.getName());
