@@ -25,12 +25,12 @@ import org.bimserver.ifc.step.deserializer.IfcStepDeserializer;
 import org.bimserver.ifc.step.serializer.Ifc2x3tc1StepSerializer;
 import org.bimserver.ifc.step.serializer.IfcStepSerializer;
 import org.bimserver.plugins.PluginConfiguration;
-import org.bimserver.plugins.PluginException;
 import org.bimserver.plugins.PluginManager;
 import org.bimserver.plugins.deserializers.DeserializeException;
 import org.bimserver.plugins.schema.SchemaPlugin;
 import org.bimserver.plugins.serializers.ProjectInfo;
 import org.bimserver.plugins.serializers.SerializerException;
+import org.bimserver.shared.exceptions.PluginException;
 
 public class BimQLTest {
 
@@ -263,14 +263,14 @@ public class BimQLTest {
 
 		try {
 			pluginManager.loadPluginsFromEclipseProject(projectRoot);
-			List<SchemaPlugin> schemaPluginList = new ArrayList<SchemaPlugin>(pluginManager.getAllSchemaPlugins(true));
-			System.out.println(schemaPluginList.size());
-		} catch (PluginException e) {
-			e.printStackTrace();
+		} catch (PluginException e1) {
+			e1.printStackTrace();
 		}
+		List<SchemaPlugin> schemaPluginList = new ArrayList<SchemaPlugin>(pluginManager.getAllSchemaPlugins(true));
+		System.out.println(schemaPluginList.size());
 
 		try {
-			writer.init(ifcModel, projectInfo, pluginManager, null, null, false); // TODO find right PackageMetaData thing
+			writer.init(ifcModel, projectInfo, pluginManager, null, false); // TODO find right PackageMetaData thing
 			writer.writeToFile(Paths.get(ifcFile), null);
 		} catch (SerializerException e) {
 			e.printStackTrace();
