@@ -27,7 +27,6 @@ import org.bimserver.ifc.step.serializer.IfcStepSerializer;
 import org.bimserver.plugins.PluginConfiguration;
 import org.bimserver.plugins.PluginManager;
 import org.bimserver.plugins.deserializers.DeserializeException;
-import org.bimserver.plugins.schema.SchemaPlugin;
 import org.bimserver.plugins.serializers.ProjectInfo;
 import org.bimserver.plugins.serializers.SerializerException;
 import org.bimserver.shared.exceptions.PluginException;
@@ -257,20 +256,9 @@ public class BimQLTest {
 	public static void exportModel(IfcModel ifcModel, String ifcFile) {
 		IfcStepSerializer writer = new Ifc2x3tc1StepSerializer(new PluginConfiguration());
 		ProjectInfo projectInfo = new ProjectInfo();
-		PluginManager pluginManager = null;//new PluginManager(); TODO
-
-		Path projectRoot = Paths.get("C:\\Users\\Wiet\\Dropbox\\workspace\\buildingSMARTLibrary");
 
 		try {
-			pluginManager.loadPluginsFromEclipseProject(projectRoot);
-		} catch (PluginException e1) {
-			e1.printStackTrace();
-		}
-		List<SchemaPlugin> schemaPluginList = new ArrayList<SchemaPlugin>(pluginManager.getAllSchemaPlugins(true));
-		System.out.println(schemaPluginList.size());
-
-		try {
-			writer.init(ifcModel, projectInfo, pluginManager, null, false); // TODO find right PackageMetaData thing
+			writer.init(ifcModel, projectInfo, null, null, false); // TODO find right PackageMetaData thing
 			writer.writeToFile(Paths.get(ifcFile), null);
 		} catch (SerializerException e) {
 			e.printStackTrace();

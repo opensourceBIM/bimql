@@ -3,18 +3,18 @@ package nl.wietmazairac.bimql.get.attribute;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.bimserver.ifc.IfcModel;
+import org.bimserver.emf.IfcModelInterface;
 import org.bimserver.models.ifc2x3tc1.IfcRoot;
 
 public class GetAttributeMain {
 	// fields
-	private IfcModel ifcModel;
+	private IfcModelInterface ifcModel;
 	private List<IfcRoot> ifcRootList;
 	private List<Object> objectList;
 	private String string;
 
 	// constructors
-	public GetAttributeMain(IfcModel ifcModel, String string) {
+	public GetAttributeMain(IfcModelInterface ifcModel, String string) {
 		this.ifcModel = ifcModel;
 		this.ifcRootList = ifcModel.getAllWithSubTypes(IfcRoot.class);
 		for (IfcRoot ifcRoot : ifcRootList) {
@@ -34,11 +34,11 @@ public class GetAttributeMain {
 	}
 
 	// methods
-	public IfcModel getIfcModel() {
+	public IfcModelInterface getIfcModel() {
 		return ifcModel;
 	}
 
-	public void setIfcModel(IfcModel ifcModel) {
+	public void setIfcModel(IfcModelInterface ifcModel) {
 		this.ifcModel = ifcModel;
 	}
 

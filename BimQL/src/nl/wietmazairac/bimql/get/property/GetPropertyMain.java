@@ -3,7 +3,7 @@ package nl.wietmazairac.bimql.get.property;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.bimserver.ifc.IfcModel;
+import org.bimserver.emf.IfcModelInterface;
 import org.bimserver.models.ifc2x3tc1.*;
 import org.bimserver.models.ifc2x3tc1.impl.Ifc2x3tc1PackageImpl;
 import org.bimserver.models.ifc2x3tc1.impl.IfcAbsorbedDoseMeasureImpl;
@@ -103,13 +103,13 @@ import org.bimserver.models.ifc2x3tc1.impl.IfcWarpingMomentMeasureImpl;
 
 public class GetPropertyMain {
 	// fields
-	private IfcModel ifcModel;
+	private IfcModelInterface ifcModel;
 	private List<Object> objectList;
 	private List<IfcRoot> ifcRootList;
 	private String string;
 
 	// constructors
-	public GetPropertyMain(IfcModel ifcModel, String string) {
+	public GetPropertyMain(IfcModelInterface ifcModel, String string) {
 		this.ifcModel = ifcModel;
 		this.ifcRootList = ifcModel.getAllWithSubTypes(IfcRoot.class);
 		for (IfcRoot ifcRoot : ifcRootList) {
@@ -124,11 +124,11 @@ public class GetPropertyMain {
 	}
 
 	// methods
-	public IfcModel getIfcModel() {
+	public IfcModelInterface getIfcModel() {
 		return ifcModel;
 	}
 
-	public void setIfcModel(IfcModel ifcModel) {
+	public void setIfcModel(IfcModelInterface ifcModel) {
 		this.ifcModel = ifcModel;
 	}
 

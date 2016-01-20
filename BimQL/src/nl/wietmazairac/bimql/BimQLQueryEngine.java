@@ -16,13 +16,14 @@ import org.bimserver.plugins.Reporter;
 import org.bimserver.plugins.objectidms.ObjectIDM;
 import org.bimserver.plugins.queryengine.QueryEngine;
 import org.bimserver.plugins.queryengine.QueryEngineException;
-import org.bimserver.plugins.schema.Attribute;
-import org.bimserver.plugins.schema.EntityDefinition;
-import org.bimserver.plugins.schema.InverseAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import nl.tue.buildingsmart.schema.Attribute;
+import nl.tue.buildingsmart.schema.EntityDefinition;
+import nl.tue.buildingsmart.schema.InverseAttribute;
 
 public class BimQLQueryEngine implements QueryEngine {
 	private static final Logger LOGGER = LoggerFactory.getLogger(BimQLQueryEngine.class);
