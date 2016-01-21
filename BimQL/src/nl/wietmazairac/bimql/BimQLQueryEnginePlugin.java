@@ -13,7 +13,6 @@ import org.bimserver.shared.exceptions.PluginException;
 
 public class BimQLQueryEnginePlugin implements QueryEnginePlugin {
 
-	private boolean initialized;
 	private final Map<String, String> examples = new LinkedHashMap<String, String>();
 
 	@Override
@@ -28,21 +27,6 @@ public class BimQLQueryEnginePlugin implements QueryEnginePlugin {
 		examples.put("Return all rooted entities of which the Name attribute end with Level", "Select $Var1\nWhere $Var1.Attribute.Name = *Level");
 		examples.put("Return all rooted entities which have a Name attribute", "Select $Var1\nWhere $Var1.Attribute.Name = *");
 		examples.put("Return all GlobalId objects which are related to rooted objects of type IfcDoor", "Select $Var1\nWhere $Var1.EntityType = IfcDoor\nSelect $Var2 := $Var1.Attribute.GlobalId");
-	}
-
-	@Override
-	public String getDescription() {
-		return "BimQL";
-	}
-
-	@Override
-	public String getVersion() {
-		return "1.0";
-	}
-
-	@Override
-	public boolean isInitialized() {
-		return initialized;
 	}
 
 	@Override
