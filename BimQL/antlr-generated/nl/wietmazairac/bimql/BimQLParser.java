@@ -19,7 +19,6 @@ import org.antlr.runtime.RecognizerSharedState;
 import org.antlr.runtime.Token;
 import org.antlr.runtime.TokenStream;
 import org.bimserver.emf.IfcModelInterface;
-import org.bimserver.ifc.IfcModel;
 import org.bimserver.models.ifc2x3tc1.IfcRoot;
 import org.eclipse.emf.ecore.EObject;
 
@@ -71,7 +70,7 @@ public class BimQLParser extends Parser {
 
 
     	Map<String, List<Object>> hashMapObjectList = new HashMap<String, List<Object>>();
-    	Map<String, IfcModel> hashMapIfcModel = new HashMap<String, IfcModel>();
+    	Map<String, IfcModelInterface> hashMapIfcModel = new HashMap<String, IfcModelInterface>();
     	
 
 
