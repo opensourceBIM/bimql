@@ -104,6 +104,7 @@
 									<goal>jar</goal>
 								</goals>
 								<configuration>
+									<additionalJOption>-Xss1g</additionalJOption>
 									<additionalparam>-Xdoclint:none</additionalparam>
 								</configuration>
 							</execution>
