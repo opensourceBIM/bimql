@@ -39,7 +39,7 @@ public class GetAttributeSubIfcEnginePluginDescriptor {
 			 //1String
 		}
 		else if (string.equals("DefaultName")) {
-			resultList.add(((RenderEnginePluginDescriptor) object).getDefaultName());
+			resultList.add(((RenderEnginePluginDescriptor) object).getName());
 			 //1String
 		}
 		return resultList;

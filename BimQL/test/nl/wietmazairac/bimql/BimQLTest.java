@@ -258,7 +258,7 @@ public class BimQLTest {
 		ProjectInfo projectInfo = new ProjectInfo();
 
 		try {
-			writer.init(ifcModel, projectInfo, null, null, false); // TODO find right PackageMetaData thing
+			writer.init(ifcModel, projectInfo, null, false); // TODO find right PackageMetaData thing
 			writer.writeToFile(Paths.get(ifcFile), null);
 		} catch (SerializerException e) {
 			e.printStackTrace();

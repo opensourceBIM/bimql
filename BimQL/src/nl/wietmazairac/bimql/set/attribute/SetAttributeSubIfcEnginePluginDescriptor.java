@@ -52,7 +52,7 @@ public class SetAttributeSubIfcEnginePluginDescriptor {
 		}
 		else if (attributeName.equals("DefaultName")) {
 			//1NoEList
-			((RenderEnginePluginDescriptor) object).setDefaultName(attributeNewValue);
+			((RenderEnginePluginDescriptor) object).setName(attributeNewValue);
 			 //1void
 			 //1String
 		}

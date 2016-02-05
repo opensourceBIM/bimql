@@ -6,7 +6,7 @@ import java.util.Map;
 
 import org.bimserver.models.store.ObjectDefinition;
 import org.bimserver.plugins.PluginConfiguration;
-import org.bimserver.plugins.PluginManagerInterface;
+import org.bimserver.plugins.PluginContext;
 import org.bimserver.plugins.queryengine.QueryEngine;
 import org.bimserver.plugins.queryengine.QueryEnginePlugin;
 import org.bimserver.shared.exceptions.PluginException;
@@ -16,7 +16,7 @@ public class BimQLQueryEnginePlugin implements QueryEnginePlugin {
 	private final Map<String, String> examples = new LinkedHashMap<String, String>();
 
 	@Override
-	public void init(PluginManagerInterface pluginManager) throws PluginException {
+	public void init(PluginContext pluginContext) throws PluginException {
 		examples.put("Return all rooted entities", "Select $Var1");
 		examples.put("Return all rooted entities of type IfcDoor", "Select $Var1\nWhere $Var1.EntityType = IfcDoor");
 		examples.put("Return all rooted entities of which the OverallHeight attribute equals 2.325", "Select $Var1\nWhere $Var1.Attribute.OverallHeight = 2.325");
@@ -32,11 +32,6 @@ public class BimQLQueryEnginePlugin implements QueryEnginePlugin {
 	@Override
 	public QueryEngine getQueryEngine(PluginConfiguration pluginConfiguration) {
 		return new BimQLQueryEngine();
-	}
-
-	@Override
-	public String getDefaultName() {
-		return "BimQL Engine";
 	}
 
 	@Override
