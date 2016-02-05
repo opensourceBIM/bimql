@@ -3,6 +3,7 @@
 	<JavaPlugin>
 		<interfaceClass>org.bimserver.plugins.queryengine.QueryEnginePlugin</interfaceClass>
 		<implementationClass>nl.wietmazairac.bimql.BimQLQueryEnginePlugin</implementationClass>
+		<name>BimQL</name>
 		<description>BIMserver plugin which allows querying models with the BimQL query language</description>
 	</JavaPlugin>
 </PluginDescriptor>
