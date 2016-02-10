@@ -2,7 +2,8 @@ package nl.wietmazairac.bimql.get.attribute;
 
 import java.util.ArrayList;
 
-import org.bimserver.models.store.RenderEnginePluginDescriptor;
+import org.bimserver.models.store.PluginConfiguration;
+import org.bimserver.models.store.PluginDescriptor;
 
 public class GetAttributeSubIfcEnginePluginDescriptor {
 	// fields
@@ -35,11 +36,11 @@ public class GetAttributeSubIfcEnginePluginDescriptor {
 	public ArrayList<Object> getResult() {
 	ArrayList<Object> resultList = new ArrayList<Object>();
 		if (string.equals("PluginClassName")) {
-			resultList.add(((RenderEnginePluginDescriptor) object).getPluginClassName());
+			resultList.add(((PluginDescriptor) object).getPluginClassName());
 			 //1String
 		}
 		else if (string.equals("DefaultName")) {
-			resultList.add(((RenderEnginePluginDescriptor) object).getName());
+			resultList.add(((PluginDescriptor) object).getName());
 			 //1String
 		}
 		return resultList;

@@ -1,6 +1,6 @@
 package nl.wietmazairac.bimql.set.attribute;
 
-import org.bimserver.models.store.RenderEnginePluginDescriptor;
+import org.bimserver.models.store.PluginDescriptor;
 
 public class SetAttributeSubIfcEnginePluginDescriptor {
 	// fields
@@ -46,13 +46,13 @@ public class SetAttributeSubIfcEnginePluginDescriptor {
 	public void setAttribute() {
 		if (attributeName.equals("PluginClassName")) {
 			//1NoEList
-			((RenderEnginePluginDescriptor) object).setPluginClassName(attributeNewValue);
+			((PluginDescriptor) object).setPluginClassName(attributeNewValue);
 			 //1void
 			 //1String
 		}
 		else if (attributeName.equals("DefaultName")) {
 			//1NoEList
-			((RenderEnginePluginDescriptor) object).setName(attributeNewValue);
+			((PluginDescriptor) object).setName(attributeNewValue);
 			 //1void
 			 //1String
 		}
