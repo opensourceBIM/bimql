@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.opensourcebim</groupId>
 	<artifactId>bimql</artifactId>
-	<version>0.0.12-SNAPSHOT</version>
+	<version>0.0.12</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -204,7 +204,7 @@
 		<url>https://github.com/opensourceBIM/bimql.git</url>
 		<connection>scm:git:https://github.com/opensourceBIM/bimql.git</connection>
 		<developerConnection>scm:git:https://github.com/opensourceBIM/bimql.git</developerConnection>
-		<tag>BimQL-0.0.1</tag>
+		<tag>bimql-0.0.12</tag>
 	</scm>
 	<organization>
 		<name>OpenSource BIM</name>
