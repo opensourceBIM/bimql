@@ -176,12 +176,12 @@
 		<dependency>
 			<groupId>org.opensourcebim</groupId>
 			<artifactId>pluginbase</artifactId>
-			<version>1.5.37</version>
+			<version>1.5.44-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.opensourcebim</groupId>
 			<artifactId>ifcplugins</artifactId>
-			<version>0.0.3</version>
+			<version>0.0.14-SNAPSHOT</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
